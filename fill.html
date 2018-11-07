@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HAVELLS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body class="register-page">
+
+<nav class="navbar navbar-inverse" style=>
+    <div class="container-fluid">
+      <div class="navbar-header">
+         <p class="level-info-container red-t font-weight-bold ">Current level :: <span class="level-stage"> MA</span></p>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">
+             <img src="img/icon/icon.png" class="d-inline-block align-top" alt=""> 
+        </a>
+      </div>
+      <div class="navbar-collapse collapse" id="myNavbar" style="height: 1px;" aria-expanded="false">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a data-toggle="modal" data-target="#myModal"><span></span>Terms and conditions</a>
+              </li>
+          <li><a data-toggle="modal" data-target="#contactModal" ><span class=""></span>Contact us</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+ <!--main partion -->
+<div class="container main-area register mt-5 pt-5">
+  <div> <!--class="row center-border" -->
+   
+    <div class="right-partition">
+      <!-- regist Section -->
+       <div class="row justify-content-md-center fillSection" style="display: block">
+        <div class="col-md-10 col-md-offset-1">
+           <form class="mb-5" action="/action_page.php">
+            <div class="red-t my-4  font-weight-bold text-center regist-head status-title">  Click on Fill button to start filling <br/>  your     maaza      </div>       
+
+              <div class="fill-container my-5">
+                  <div class="fake">              
+                      </div>
+              </div>
+
+              <div class="form-group my-4">
+                <button type="submit" class="btn btn-submit btn-fill btn-yellow-bordered">CLICK HERE TO FILL YOUR MAAZA</button>
+                </div>
+
+               <div class="form-group my-4">
+                <button type="submit" class="btn btn-submit btn-participate btn-yellow" data-toggle="modal" data-target="#participateModal">Participate in lucky draw for level M</button>
+                </div>
+
+               <div class="form-group my-4">
+                <button type="submit" class="btn btn-submit btn-later btn-red-bordered">Save and come back later with more maza?</button>
+                </div>
+
+              <div class="form-group  text-center">
+              <label class="form-check-label">
+                <p class="my-3 red-t"> See lucky draw winners </p>
+                <p class="my-3 red-t"> See lucky draw rewards for different levels </p>
+                </label>
+              </div>
+           
+           </form>
+        </div>
+       </div>
+    <!-- end regist section -->
+
+   
+    </div>
+
+  </div>
+</div>
+ <!-- end main partion -->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Terms and Condition</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+           Modal sample
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="participateModal" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h5 class="modal-title"> Your progress has been saved! </h5>
+      </div>
+      <div class="modal-body">
+        <p>
+           Buy more maza to fill more and participate in lucky draw and mega draw to win exciting gift prizes.
+        </p>
+        <button type="submit" class="btn btn-submit btn-yellow"> Close and come back later</button>
+       
+      </div>
+     
+    </div>
+
+  </div>
+</div>
+
+<div id="contactModal" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Contact Us;</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Addres::
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end Modal -->
+
+
+
+<section class="footer-section py-4">
+    <!-- Footer -->
+    <footer class="page-footer font-small">      
+      <!-- Copyright -->
+      <div class="footer-copyright text-center"> All rights reserved, 
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/">Bigcity Promotions, 2018</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+  </section>
+  <link rel="stylesheet" type="text/css" href="css/utilities.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css"> 
+  <link rel="stylesheet" type="text/css" href="css/limcaStyle.css"> 
+  <link rel="stylesheet" type="text/css" href="css/fillStyle.css">
+</body>
+
+
+<script type="text/javascript">
+  $('.btn-participate').hide();
+  $('.btn-later').hide();
+  
+
+  $(document).on('click','.btn-submit',function(e){
+    e.preventDefault();
+    $('.regSection').hide();
+    $('.banner-container').remove();
+    //$('.otpSection').css('margin-top','4rem');
+    $('.err-container').css('margin-top','5rem');    
+    $('.otpSection').show();
+  });
+
+   $(document).on('click','.validate-otp',function(e){
+    $('.otpSection').hide();
+    $('.moreDetailSection').show();
+    
+  });
+
+  $(document).on('click','.btn-fill',function(e){
+    e.preventDefault();
+     $('.btn-participate').show();
+     $('.btn-later').show();
+     $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
+     $(this).html('See lucky draw winners');
+   
+  });
+</script>
+</html>
