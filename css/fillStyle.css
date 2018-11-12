@@ -43,7 +43,7 @@
     color: #f13332 !important;
 }
 
-#participateModal .modal-body::before{
+#saveModal .modal-body::before{
 	background:url(../img/progress.png);
 	display: inline-block;
 	height: 12rem;
@@ -54,4 +54,17 @@
 }
 .modal-header {
     text-align: center;
+}
+.list-container{
+  border: 0.5px solid #979797;
+  margin: 2rem 0;
+}
+.list-container .list-title {
+    padding: 1.3rem 1.5rem;
+    background: #ecf0f1;
+}
+.list-container  li {
+        list-style: none;
+    padding: 2rem 6rem;
+    
 }
