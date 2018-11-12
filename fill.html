@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>HAVELLS</title>
+  <title>Maaza</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -67,7 +67,7 @@
                 </div>
 
                <div class="form-group my-4">
-                <button type="submit" class="btn btn-submit btn-later btn-red-bordered">Save and come back later with more maza?</button>
+                <button type="submit" class="btn btn-submit btn-later btn-red-bordered" data-toggle="modal" data-target="#saveModal">Save and come back later with more maza?</button>
                 </div>
 
               <div class="form-group  text-center">
@@ -114,6 +114,37 @@
 </div>
 
 <div id="participateModal" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h5 class="modal-title"> Your progress has been saved! </h5>
+      </div>
+      <div class="modal-body">
+        <p>
+           Are you sure you want to participate in the lucky draw for this level? You will not be eligible to participate in any other lucky draw except the MAAZA mega draw (when you fill the complete MAAZA).
+        </p>
+
+        <div class="list-container">
+          <div class="list-title"> See lucky draw rewards for different levels </div>
+          <ul>
+            <li> <span>See lucky draw rewards for different levels</span></li>
+          </ul>
+        </div>
+        <button type="submit" class="btn btn-submit btn-yellow"> Confirm participation for level M</button>
+        <p >
+           See lucky draw rewards for <br/> different levels
+        </p>
+      </div>
+     
+    </div>
+
+  </div>
+</div>
+
+<div id="saveModal" class="modal fade " role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
