@@ -32,10 +32,13 @@ body.register-page{
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border: none !important;
-   
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #fbfbfb;
+    position: absolute;
+    z-index: 99;
+    width: 20rem;
 }
+
 .navbar-inverse .navbar-nav > li > a{
    color: #f7892f !important;
 }
