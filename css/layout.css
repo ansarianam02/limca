@@ -1,13 +1,12 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 body{
-  height: 100vh;
+ /* height: 100vh;*/
 }
 body.register-page{
     background-image: url(../img/regist-mbl-bg.png) !important;
     background-repeat: no-repeat;
     background-position: 0 94%;
-    background-size: cover;
 }
 .navbar-inverse {
     background-color: #fff;
