@@ -67,6 +67,8 @@
 .list-container .list-title {
     padding: 1.3rem 1.5rem;
     background: #ecf0f1;
+    width: 99.9%;
+    position: relative;
 }
 .list-container  li {
         list-style: none;
