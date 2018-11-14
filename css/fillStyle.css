@@ -38,9 +38,10 @@
     color: #f13332 !important;
 }
 .btn-later{
-	border: 1px solid #f13332;
+	border: 1px solid #00aa4f;
     background: none !important;
-    color: #f13332 !important;
+    color: #00aa4f !important;
+    font-size: 1.2rem !important;
 }
 .modal-body #saveModal{
   text-align: center;
@@ -81,4 +82,23 @@
     left: -15px;
     top: 1rem;
     height: 8rem;
+}
+
+
+.iconHolder {
+    display: inline-block;
+    height: 3.2rem;
+    width: 3.2rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    cursor: pointer;
+}
+.iconHolder.fb{
+    background-image:  url(../img/facebook.png);    
+}
+.iconHolder.twt{
+    background-image:  url(../img/facebook.png);    
+}
+.iconHolder.wts{
+    background-image:  url(../img/facebook.png);    
 }
