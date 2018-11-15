@@ -66,7 +66,7 @@
       <!-- regist Section -->
        <div class="row justify-content-md-center regSection" style="display: block">
         <div class="col-md-10 col-md-offset-1">
-       <form class="mb-5" action="/action_page.php">
+       <form class="mb-5" action="">
         <div class="red-t my-4  font-weight-bold text-center regist-head">  PLEASE ENTER YOUR MOBILE NUMBER </div>        
        <div class="form-group my-5">
         <input type="number" class="form-control" id="pwd" placeholder="Mobile number*">
@@ -85,7 +85,7 @@
 
 
        <div class="form-group">
-        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="submit" class="btn btn-submit btn-mobile-submit">Submit</button>
         </div>
     </form></div>
        </div>
@@ -95,7 +95,7 @@
 
     <div class="row justify-content-md-center otpSection mb-5" style="display:none;">
         <div class="col-md-10 col-md-offset-1">
-       <form action="/action_page.php">
+       <form  action="">
         <div class="row justify-content-md-center gray-t">
             <div class="red-t my-4  font-weight-bold text-center regist-head"> VALIDATE YOUR MOBILE NUMBER </div>
             
@@ -128,7 +128,7 @@
       <!-- -->
        <div class="row justify-content-md-center moreDetailSection mb-5" style="display: none">
         <div class="col-md-10 col-md-offset-1">
-             <form action="/action_page.php">
+             <form action="">
               <div class="red-t m-4  font-weight-bold text-center regist-head"> WE NEED SOME MORE INFORMATION</div>
               
               <div class="form-group">        
@@ -168,7 +168,7 @@
 
 
                <div class="form-group">
-                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="submit" class="btn btn-submit btn-detail-submit">Submit</button>
                 </div>
             </form>
           </div>
@@ -263,7 +263,7 @@
 
 <script type="text/javascript">
   
-  $(document).on('click','.btn-submit',function(e){
+  $(document).on('click','.btn-mobile-submit',function(e){
     e.preventDefault();
     $('.regSection').hide();
     $('.banner-container').remove();
@@ -272,10 +272,17 @@
     $('.otpSection').show();
   });
 
-   $(document).on('click','.validate-otp',function(e){
+  $(document).on('click','.validate-otp',function(e){
+    //debugger;
+     e.preventDefault();
     $('.otpSection').hide();
     $('.moreDetailSection').show();
     
+  });
+  $(document).on('click','.btn-detail-submit',function(e){
+       e.preventDefault();
+    // debugger; 
+    window.location='fill.html';
   });
 </script>
 </html>
