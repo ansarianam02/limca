@@ -8,10 +8,21 @@ html, body {
     overflow: auto;
 }
 body.register-page{
+    
+}
+section.footer-section{
+  position: relative;
+}
+section.footer-section::before {
     background-image: url(../img/regist-mbl-bg.png) !important;
     background-repeat: no-repeat;
-    background-position: 0 94%;
-    background-position: center 94%;
+    background-size: 100% 100%;
+    content: '';
+    position: absolute;
+    height: 8rem;
+    width: 100%;
+    top: -8rem;
+    z-index: -1;
 }
 .navbar-inverse {
     background-color: #fff;
@@ -111,7 +122,7 @@ body.register-page{
 .btn-submit{
   width: 100%;
   background:#f13332;
-  color: #ffffff;
+  color: #ffffff !important;
   cursor: pointer;
   font-size: 1.2rem;
 }
