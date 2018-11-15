@@ -116,8 +116,24 @@ section.footer-section::before {
 .font-weight-bold {
     font-weight: 700!important;
 }
+.modal-header {
+    text-align: center;
+}
 .modal{
-    margin-top: 7rem;
+    margin-top: 5rem;
+}
+.modal-dialog{
+    margin-top: 20px;
+}
+.modal-header .close {
+    position: absolute;
+    right: -11px;
+    top: -15px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px 9px;
+    opacity: 1;
+    box-shadow: -1px 0px 7px 0px #999;
 }
 .btn-submit{
   width: 100%;
