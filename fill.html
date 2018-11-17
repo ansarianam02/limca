@@ -158,23 +158,23 @@
       </div>
       <div class="modal-body">
             <div class="list-container">
-              <div class="list-title font-weight-bold corner-maza">Level M </div>              
+              <div class="list-title font-weight-bold corner-maza level1">Level M </div>              
                 <p class="mx-3 my-4">  Philips Bass+ SHL3070 Headphones </p>              
             </div>
             <div class="list-container">
-              <div class="list-title font-weight-bold corner-maza">Level MA </div>              
+              <div class="list-title font-weight-bold corner-maza level2">Level MA </div>              
                 <p class="mx-3 my-4">  Anti-Theft Smart Bagpack </p>              
             </div>
             <div class="list-container">
-              <div class="list-title font-weight-bold corner-maza">Level MAA </div>              
+              <div class="list-title font-weight-bold corner-maza level3">Level MAA </div>              
                 <p class="mx-3 my-4">  Fujifilm Instax Square SQ6 Instant Camera </p>              
             </div>
             <div class="list-container">
-              <div class="list-title font-weight-bold corner-maza">Level MAAZ </div>              
+              <div class="list-title font-weight-bold corner-maza level4">Level MAAZ </div>              
                 <p class="mx-3 my-4">  Cannon EOS 3000D 18MP DSLR Camera </p>              
             </div>
             <div class="list-container">
-              <div class="list-title font-weight-bold corner-maza">Level MAAZA - Mega Draw </div>              
+              <div class="list-title font-weight-bold corner-maza level5">Level MAAZA - Mega Draw </div>              
                 <p class="mx-3 my-4">  Smart phone - iPhone X (256 GB) </p>              
             </div>
       </div>
@@ -292,21 +292,27 @@
   $(function(){
       $('.btn-participate').hide();
       $('.btn-later').hide(); 
+       var chance = true;
 
 
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
-      var level = 'MAA';
+      var level = 'MAAZ';
       var levelNo = parseInt(map[level]) ;
 
       //set depending on the level 
       $('.fill-container').css('background-image','url("img/static/'+levelNo+'-static.png")');
       
-         
+        //set level on yop
+      $('.level-stage').html(level);  
 
 
-  
+ 
   $(document).on('click','.btn-fill',function(e){
+
+    if(!chance) 
+      return true;  
     e.preventDefault();
+    chance = false;
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
      elem.addClass('btn-disabled');
