@@ -289,18 +289,22 @@
 
 
 <script type="text/javascript">
-  $('.btn-participate').hide();
-  $('.btn-later').hide();
-  
-  // $(document).on('click','.btn-fill',function(e){
-  //   e.preventDefault();
-  //    $('.btn-participate').show();
-  //    $('.btn-later').show();
-  //    $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
-  //    $(this).html('See lucky draw winners');
-   
-  // });
+  $(function(){
+      $('.btn-participate').hide();
+      $('.btn-later').hide(); 
 
+
+      var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
+      var level = 'MAA';
+      var levelNo = parseInt(map[level]) ;
+
+      //set depending on the level 
+      $('.fill-container').css('background-image','url("img/static/'+levelNo+'-static.png")');
+      
+         
+
+
+  
   $(document).on('click','.btn-fill',function(e){
     e.preventDefault();
     var elem = $(this);
@@ -314,9 +318,16 @@
      $('.btn-participate').show();
      $('.btn-later').show();
      $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
-     
-   
+
+
+     //set level dynamically
+     $('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
   });
+
+   $(document).on('','',function(){
+
+   });
+
    $(document).on('click','.redirect-level-page',function(e){
         window.location ="winner-list.html";    
   });
@@ -325,5 +336,8 @@
      e.preventDefault();    
    });
   
+
+});
+
 </script>
 </html>
