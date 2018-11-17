@@ -219,10 +219,15 @@
 
   $(document).on('click','.btn-fill',function(e){
     e.preventDefault();
+    var ele= $(this);
+     ele.html('FILLING IN YOUR MAAZA…');
+     setTimeout(function(){  ele.html('SCAN ANOTHER QR CODE TO GET MAAZA');
+         }, 3000);
+
      $('.btn-participate').show();
      $('.btn-later').show();
      $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
-     $(this).html('See lucky draw winners');
+     
    
   });
 </script>
