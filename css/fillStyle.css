@@ -80,7 +80,6 @@
 .list-container  li img{
   position: absolute;
     left: -15px;
-    top: 1rem;
     height: 8rem;
 }
 
@@ -101,4 +100,8 @@
 }
 .iconHolder.wts{
     background-image:  url(../img/whatsapp.png);    
+}
+
+.btn-disabled{
+    opacity: 0.6 !important;
 }
