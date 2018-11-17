@@ -1,7 +1,6 @@
 .fill-container{
 	background: url(../img/mbl-banner.png);
-   background-size: 100% 92%;
-   background-position: 0 2rem;
+   background-size: 100% 100%;
    background-repeat: no-repeat;
    margin: 4rem 0 !important;
 }
@@ -79,8 +78,9 @@
 }
 .list-container  li img{
   position: absolute;
-    left: -15px;
-    height: 8rem;
+  left: -15px;
+  height: 8rem;
+  top: 0rem;
 }
 
 
