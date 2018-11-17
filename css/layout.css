@@ -65,8 +65,7 @@ section.footer-section::before {
 }
 
 .corner-maza::after{
-    position: absolute;
-    background: url(../img/corner-maaza.png);
+    position: absolute;    
     background-size: 100%;
     display: inline-block;
     height: 3rem;
@@ -75,6 +74,21 @@ section.footer-section::before {
     background-repeat: no-repeat;
     right: 2rem;
     top: 1rem;
+}
+.corner-maza.level1::after{
+    background-image: url(../img/corner-maaza1.png) !important;
+}
+.corner-maza.level2::after{
+   background-image: url(../img/corner-maaza2.png) !important;
+}
+.corner-maza.level3::after{
+    background-image: url(../img/corner-maaza3.png) !important;
+}
+.corner-maza.level4::after{
+    background-image: url(../img/corner-maaza4.png) !important;
+}
+.corner-maza.level5::after{
+    background-image: url(../img/corner-maaza5.png) !important;
 }
 /*.regSection form , .otpSection form ,.moreDetailSection form{
   padding: 1rem;
@@ -104,7 +118,11 @@ section.footer-section::before {
    background-size: 100% 92%;
    background-position: 0 2rem;
    background-repeat: no-repeat;
-   margin-top: -5rem;
+   margin-top: -9rem;
+}
+.navbar-inverse{
+  background:none !important;
+  border: none;
 }
 /*.otp-field ,.otp-warning {
   margin:4rem 0 !important;
