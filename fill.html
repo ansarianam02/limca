@@ -292,12 +292,29 @@
   $('.btn-participate').hide();
   $('.btn-later').hide();
   
+  // $(document).on('click','.btn-fill',function(e){
+  //   e.preventDefault();
+  //    $('.btn-participate').show();
+  //    $('.btn-later').show();
+  //    $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
+  //    $(this).html('See lucky draw winners');
+   
+  // });
+
   $(document).on('click','.btn-fill',function(e){
     e.preventDefault();
+    var elem = $(this);
+     elem.html('FILLING IN YOUR MAAZA…');
+     elem.addClass('btn-disabled');
+     setTimeout(function(){  
+      elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
+      elem.removeClass('btn-disabled');
+         }, 2000);
+
      $('.btn-participate').show();
      $('.btn-later').show();
      $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
-     $(this).html('See lucky draw winners');
+     
    
   });
    $(document).on('click','.redirect-level-page',function(e){
