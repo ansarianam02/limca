@@ -53,7 +53,7 @@
            <form class="mb-5" action="/action_page.php">
             <div class="red-t my-4  font-weight-bold text-center regist-head status-title">  Click on Fill button to start filling <br/>  your     maaza      </div>       
 
-              <div class="fill-container my-5">
+              <div class="fill-container staticImg animationImg my-5">
                   <div class="fake">              
                       </div>
               </div>
@@ -285,6 +285,7 @@
   <link rel="stylesheet" type="text/css" href="css/layout.css"> 
   <link rel="stylesheet" type="text/css" href="css/limcaStyle.css"> 
   <link rel="stylesheet" type="text/css" href="css/fillStyle.css">
+  <script type="text/javascript" src="js/main.js"></script> 
 </body>
 
 
@@ -300,8 +301,14 @@
       var levelNo = parseInt(map[level]) ;
 
       //set depending on the level 
-      $('.fill-container').css('background-image','url("img/static/'+levelNo+'-static.png")');
-      
+      $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
+      //set animation Img
+      //
+
+      var animationImage = new Image();
+      animationImage.src = 'img/Animations/'+levelNo+'.gif';
+     
+      // staticImg animationImg
         //set level on yop
       $('.level-stage').html(level);  
 
@@ -327,7 +334,9 @@
 
 
      //set level dynamically
-     $('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
+     //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
+     
+     $('.fill-container').css('background-image','url("'+animationImage.src+'")');
   });
 
    $(document).on('','',function(){
