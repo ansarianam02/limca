@@ -61,7 +61,7 @@ section.footer-section::before {
 }
 
 .navbar-inverse .navbar-nav > li > a{
-   color: #f7892f !important;
+  /* color: #f7892f !important;*/
 }
 .main-area::after{
 
