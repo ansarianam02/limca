@@ -285,76 +285,8 @@
   <link rel="stylesheet" type="text/css" href="css/layout.css"> 
   <link rel="stylesheet" type="text/css" href="css/limcaStyle.css"> 
   <link rel="stylesheet" type="text/css" href="css/fillStyle.css">
-  <script type="text/javascript" src="js/main.js"></script> 
+  <script type="text/javascript" src="js/fill.js"></script> 
 </body>
 
 
-<script type="text/javascript">
-  $(function(){
-      $('.btn-participate').hide();
-      $('.btn-later').hide(); 
-       var chance = true;
-
-
-      var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
-      var level = 'MAAZ';
-
-      //pass Api letter Number here
-      var levelNo = parseInt(map[level]) ;
-
-      //set depending on the level 
-      $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
-      //set animation Img
-      //
-
-      var animationImage = new Image();
-      animationImage.src = 'img/Animations/'+levelNo+'.gif';
-     
-      // staticImg animationImg
-        //set level on yop
-      $('.level-stage').html(level);  
-
-
- 
-  $(document).on('click','.btn-fill',function(e){
-
-    if(!chance) 
-      return true;  
-    e.preventDefault();
-    chance = false;
-    var elem = $(this);
-     elem.html('FILLING IN YOUR MAAZA…');
-     elem.addClass('btn-disabled');
-     setTimeout(function(){  
-      elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
-      elem.removeClass('btn-disabled');
-         }, 2000);
-
-     $('.btn-participate').show();
-     $('.btn-later').show();
-     $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
-
-
-     //set level dynamically
-     //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
-     
-     $('.fill-container').css('background-image','url("'+animationImage.src+'")');
-  });
-
-   $(document).on('','',function(){
-
-   });
-
-   $(document).on('click','.redirect-level-page',function(e){
-        window.location ="winner-list.html";    
-  });
-
-   $(document).on('click','.btn-submit',function(e){
-     e.preventDefault();    
-   });
-  
-
-});
-
-</script>
 </html>
