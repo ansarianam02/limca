@@ -192,7 +192,9 @@ section.footer-section::before {
  .modal-header{
     background: rgba(0, 0, 0, 0.1) !important;
  }
-
+.modal-dialog {
+   margin: 20px;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
