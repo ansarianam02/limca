@@ -64,6 +64,11 @@ section.footer-section::before {
   /* color: #f7892f !important;*/
   cursor: pointer;
 }
+.container.main-area{
+  background-image: url(../img/main-top.png);
+  background-size: 100% 45%;
+  background-repeat: no-repeat;
+}
 .main-area::after{
 
 }
@@ -108,6 +113,7 @@ section.footer-section::before {
 }*/
 .red-t , .navbar-light .navbar-nav .nav-link{
     color: #d51a1b !important;
+    cursor:pointer
 }
 .err-msg{
   background:#ffe1e5;
@@ -159,6 +165,10 @@ section.footer-section::before {
   width: 3rem;
   height: 3rem;
 }
+.btn-disabled{
+    opacity: 0.6 !important;
+}
+
 .btn-submit{
   width: 100%;
   background:#f13332;

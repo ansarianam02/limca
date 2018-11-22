@@ -11,7 +11,10 @@
     box-shadow: none !important;
 }
 .form-control{
-  color: #929699;
+  /*color: #929699;*/
+}
+select option:disabled {
+    color: #929699;
 }
 .regist-head {
     font-size: 1.3rem;
@@ -19,4 +22,9 @@
 
 .otp-field ,.otp-warning {
   margin:4rem 0 !important;
+}
+.otp-warning {
+    letter-spacing: -0rem;
+    font-size: 16px;
+    font-weight: 500;
 }
