@@ -69,7 +69,7 @@ section.footer-section::before {
   /* color: #f7892f !important;*/
   cursor: pointer;
 }
-.container.main-area{
+.container.main-area.bg{
   background-image: url(../img/main-top.png);
   background-size: 100% 45%;
   background-repeat: no-repeat;
