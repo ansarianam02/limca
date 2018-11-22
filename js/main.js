@@ -83,8 +83,8 @@
     
   });
   function isEmpty(value){
-  return (value == undefined || typeof value == undefined || value.length === 0);
-}
+	  return (value == undefined || typeof value == undefined || value.length === 0);
+	}
    function showError(errMsg) {
 	  	$('.err-container').show();
 	    $('.err-msg').html(errMsg);
@@ -98,6 +98,9 @@
 	  return regex.test(email);
 	}
 
+
+
+/*fill page script*/
 var baseUrl =  'https://maazaapi.bigcityredemption.com/api/';
 var tokenVal = '123123123';
 /*
@@ -331,32 +334,6 @@ $.ajax(settings).done(function (response) {
 });
 }
 
-
-/*
-*  getgame($token) $result = [
-'type' => 'SUCCESS', 'msg' => 'OK', 'data' => [ $letterno => 1 ], 'status' => 1, ];
-$result = [
-'type' => 'ERROR', 'msg' => 'Game not eligible’, 'data' => [], 'status' => 0, ];
-*/
-var getgame =function(){
-
-var tokenVal = '';
-var mobilenumVal = '';
-
-$.ajax({
-  type: "GET",
-  url: baseUrl + "getgame",
-  data: {
-	  	token: tokenVal ,
-	  	mobilenum :tokenVal
-  	},
-  cache: false,
-  success: function(data){
-     $("#resultarea").text(data);
-  }
-});
-
-}
 
 
 /*
