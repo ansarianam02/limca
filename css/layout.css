@@ -2,6 +2,7 @@
 /* No media query since this is the default in Bootstrap */
 body{
   /*height: 100vh;*/
+  padding: 0 2rem;
 }
 /*common css*/
 html, body {
