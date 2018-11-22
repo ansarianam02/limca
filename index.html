@@ -48,12 +48,12 @@
     <!-- end mega for banner  -->
 
  <!--main partion -->
-<div class="container err-container">
+<div class="container err-container" style="display: none">
   <div class="row">
      <div class="col-md-12">
         <div class="form-group">   
             <div class="err-msg" >
-                Error messages goes here and the field with error gets highlighted
+                
             </div>
         </div>
      </div>
@@ -69,12 +69,12 @@
        <form class="mb-5" action="">
         <div class="red-t my-4  font-weight-bold text-center regist-head">  PLEASE ENTER YOUR MOBILE NUMBER </div>        
        <div class="form-group my-5">
-        <input type="number" class="form-control" id="pwd" placeholder="Mobile number*">
+        <input type="number" class="form-control" id="phonenumber" placeholder="Mobile number*">
       </div>
        
       <div class="form-group form-check">
       <p class="form-check-label">
-        <input class="form-check-input" type="checkbox"> I agree to program’s <a class="red-t cursor" data-toggle="modal" data-target="#myModal"> terms and conditions </a>
+        <input class="form-check-input" id="terms" type="checkbox"> I agree to program’s <a class="red-t cursor" data-toggle="modal" data-target="#myModal"> terms and conditions </a>
         </p>
       </div>
       <div class="form-group  text-center">
@@ -102,14 +102,15 @@
             <div class="col-md-10 col-md-offset-1 mb-2 mt-2 text-center"> <h6>Please enter the One Time Password (OTP) <br/> sent to +91 - 9876543210 </h6></div>
             <div class="col-md-12 my-5">             
               <div class="form-group otp-field">        
-                <input type="text" class="form-control" id="firstname" placeholder="Enter OTP here">
+                <input type="text" class="form-control" id="otpvalue" placeholder="Enter OTP here">
               </div>
             </div>
 
             <div class="col-md-10 col-md-offset-1 text-center my-5 otp-warning">
-              <h5 class="form-check-label">
-                Resend OTP in <span class="red-t"> 00:60 seconds</span>
-                </h5>
+              <div class="form-check-label">
+                Resend OTP in 
+                </div>
+                <h5>00:60 seconds</h5>
             </div>           
 
             <div class="col-md-12 mt-4">
@@ -126,7 +127,7 @@
       
 
       <!-- -->
-       <div class="row justify-content-md-center moreDetailSection mb-5" style="display: none">
+       <div class="row justify-content-md-center moreDetailSection mb-5" style="display: none;">
         <div class="col-md-10 col-md-offset-1">
              <form action="">
               <div class="red-t m-4  font-weight-bold text-center regist-head"> WE NEED SOME MORE INFORMATION</div>
@@ -135,29 +136,29 @@
                 <input type="text" class="form-control" id="firstname" placeholder="Full name*">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="pwd" placeholder="Email ID*">
+                <input type="email" class="form-control" id="email" placeholder="Email ID*">
               </div>
                <div class="form-group">
-                <select class="form-control" id="exampleFormControlSelect1" placeholder="">
-                  <option>City you reside in*</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="form-control" id="city" placeholder="">
+                  <option value="" disabled selected>City you reside in*</option>
+                  <option>Mumbai</option>
+                  <option>Pune</option>
+                  <option>Banglore</option>
+                  <option>Aurangabad</option>
                 </select>        
               </div>
               <div class="form-group">
-                <select class="form-control" id="exampleFormControlSelect1" placeholder="">
-                  <option>State you reside in*</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="form-control" id="state" placeholder="">
+                  <option value="" disabled selected>State you reside in*</option>
+                  <option>Maharashtra</option>
+                  <option>UP</option>
+                  <option>MP</option>
+                  <option>Kerala</option>
                 </select>
               </div>
               <div class="form-group form-check">
               <p class="form-check-label">
-                <input class="form-check-input" type="checkbox"> I agree to program’s <a class="red-t cursor" data-toggle="modal" data-target="#myModal"> terms and conditions </a>
+                <input class="form-check-input" id="otp-terms" type="checkbox"> I agree to program’s <a class="red-t cursor" data-toggle="modal" data-target="#myModal"> terms and conditions </a>
                 </p>
               </div>
               <div class="form-group  text-center">
@@ -262,27 +263,6 @@
 
 
 <script type="text/javascript">
-  
-  $(document).on('click','.btn-mobile-submit',function(e){
-    e.preventDefault();
-    $('.regSection').hide();
-    $('.banner-container').remove();
-    //$('.otpSection').css('margin-top','4rem');
-    $('.err-container').css('margin-top','5rem');    
-    $('.otpSection').show();
-  });
-
-  $(document).on('click','.validate-otp',function(e){
-    //debugger;
-     e.preventDefault();
-    $('.otpSection').hide();
-    $('.moreDetailSection').show();
-    
-  });
-  $(document).on('click','.btn-detail-submit',function(e){
-       e.preventDefault();
-    // debugger; 
-    window.location='fill.html';
-  });
+ 
 </script>
 </html>
