@@ -105,7 +105,7 @@ var getgame =function(){
       elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
       elem.addClass('btn-static');
       elem.removeClass('btn-disabled');
-       $('.status-title').css('visibility','visible');
+       //$('.status-title').css('visibility','visible');
          }, 2000);
 
      $('.btn-participate').show();
