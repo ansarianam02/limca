@@ -3,7 +3,30 @@ $(function(){
       $('.btn-participate').hide();
       $('.btn-later').hide(); 
        var chance = true;
+        var prizeMap = {
+                            1:{
+                              text:'Philips Bass+ SHL3070 Headphones',
+                              imgUrl :''
+                            },
+                            2:{
+                              text:'Anti-Theft Smart Bagpack',
+                              imgUrl :'',
+                            },
+                            3:{
+                              text:'Fujifilm Instax Square SQ6 Instant Camera',
+                              imgUrl :''
+                            },
+                            4:{
+                              text:'Cannon EOS 3000D 18MP DSLR Camera',
+                              imgUrl :''
+                            },
+                            5:{
+                              text:'Smart phone - iPhone X (256 GB)',
+                              imgUrl :''
+                            }
+                          };
 
+                          
       var titleEmpty = "Awww! You have run out of your maaza stock! Buy more to fill more…";
       var tileOther = "";
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
