@@ -170,9 +170,6 @@ section.footer-section::before {
   width: 3rem;
   height: 3rem;
 }
-.btn-disabled{
-    opacity: 0.6 !important;
-}
 
 .btn-submit{
   width: 100%;
@@ -182,6 +179,10 @@ section.footer-section::before {
   font-size: 1.2rem;
   padding: 0.9rem 1rem;
 }
+.btn-disabled{
+    opacity: 0.6 !important;
+}
+
 .footer-section{
    background-image: linear-gradient(to top, #fad961, #f76b1c);
    color:white;
