@@ -8,7 +8,7 @@
 
   $(document).on('click','.btn-mobile-submit',function(e){
   	hideError();
-    e.preventDefault();
+    //e.preventDefault();
     var phoneVal = $('#phonenumber').val();
     var terms = $('#terms').is(":checked");
 
@@ -34,7 +34,7 @@
   });
 
   $(document).on('click','.validate-otp',function(e){
-     e.preventDefault();
+     //e.preventDefault();
      hideError();
     
      var isDisabled =  $('.validate-otp').hasClass('btn-disabled');
@@ -48,6 +48,10 @@
     	showError(emptyOtp);
     	return true;
     }else{
+    	//disable btn for 30 sec
+		$('.validate-otp').addClass('btn-disabled');
+		 //enable after 30 sec
+  		setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
 		validateotp(otpVal);    
     }
     
@@ -55,7 +59,7 @@
 
 
   $(document).on('click','.btn-detail-submit',function(e){
-    e.preventDefault();
+    //e.preventDefault();
     hideError();
     
     var firstVal = $('#firstname').val();
@@ -63,18 +67,13 @@
     var cityVal = $('#city').val();
     var stateVal = $('#state').val()
     var isEmailValid = isEmail(emailVal);
-    var isTerms = $('#otp-terms').is(":checked");
-
+   
     if(firstVal.length <=0 || emailVal.length <=0  || isEmpty(cityVal) || isEmpty(stateVal) ) {
     	showError(registMandatory);
     	return true;
     }else if(!isEmailValid){
     	showError(ValidEmailError);
     	return true;
-    }else if(!isTerms){
-    	 //show terms Error
-     	 showError(termsError);
-      	 return false;
     }else{
     	//redirect to next Page
     	updateuser()
@@ -249,11 +248,8 @@ var settings = {
   "data": form
 }
 
+  
 $.ajax(settings).done(function (response) {
-  //disable btn for 30 sec
-  $('.validate-otp').addClass('btn-disabled');
-  //enable after 30 sec
-  setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
   
   var res =JSON.parse(response)
   if(res.status==1){

@@ -1,11 +1,11 @@
 $(function(){
 
-
       $('.btn-participate').hide();
       $('.btn-later').hide(); 
        var chance = true;
 
-
+      var titleEmpty = "Awww! You have run out of your maaza stock! Buy more to fill more…";
+      var tileOther = "title msg ";
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
       var nameMap ={ 0 : '--' , 1 : 'M' , 2 :'MA', 3 : 'MAA', 4 : 'MAAZ', 5: 'MAAZA'};
       var animationImage ;
@@ -60,13 +60,23 @@ var getgame =function(){
       if(res.status==1){
         var stage = res.data.letterno;
               //pass Api letter Number here 
-              debugger;
               var levelNo = parseInt(stage) ;
               var level = nameMap[stage];
               //set depending on the level 
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
               //set animation Img
               
+
+               //button text with leve 
+              var txt ="Participate in lucky draw for level " + level;
+              $('.btn-participate').html(txt);
+
+
+               //set seatus 
+               if(stage==0)
+                  $('.status-title').html(titleEmpty);
+               else
+                  $('.status-title').html(tileOther);
 
               animationImage = new Image();
               animationImage.src = 'img/Animations/'+levelNo+'.gif';
@@ -84,10 +94,10 @@ var getgame =function(){
   getgame();
  
   $(document).on('click','.btn-fill',function(e){
-
-    if(!chance) 
+    $('#btnQR').click();
+   /* if(!chance) 
       return true;  
-    e.preventDefault();
+    //e.preventDefault();
     chance = false;
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
@@ -95,17 +105,17 @@ var getgame =function(){
      setTimeout(function(){  
       elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
       elem.removeClass('btn-disabled');
+       $('.status-title').css('visibility','visible');
          }, 2000);
 
      $('.btn-participate').show();
      $('.btn-later').show();
-     $('.status-title').html('Awww! You have run out of your maaza stock! Buy more to fill more…');
 
 
      //set level dynamically
      //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
-     
-     $('.fill-container').css('background-image','url("'+animationImage.src+'")');
+     $('.fill-container').removeClass('static');
+     $('.fill-container').css('background-image','url("'+animationImage.src+'")');*/
   });
 
    $(document).on('','',function(){
@@ -117,7 +127,7 @@ var getgame =function(){
   });
 
    $(document).on('click','.btn-submit',function(e){
-     e.preventDefault();    
+     //e.preventDefault();    
    });
   
 
