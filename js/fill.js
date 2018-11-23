@@ -70,13 +70,7 @@ var getgame =function(){
                //button text with leve 
               var txt ="Participate in lucky draw for level " + level;
               $('.btn-participate').html(txt);
-
-
-               //set seatus 
-               if(stage==0)
-                  $('.status-title').html(titleEmpty);
-               else
-                  $('.status-title').html(tileOther);
+              
 
               animationImage = new Image();
               animationImage.src = 'img/Animations/'+levelNo+'.gif';
@@ -105,6 +99,13 @@ var getgame =function(){
       elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
       elem.addClass('btn-static');
       elem.removeClass('btn-disabled');
+
+       //set seatus 
+       if(stage==0)
+          $('.status-title').html(titleEmpty);
+       else
+          $('.status-title').html(tileOther);
+        
        //$('.status-title').css('visibility','visible');
          }, 2000);
 
