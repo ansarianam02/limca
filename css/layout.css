@@ -202,7 +202,7 @@ section.footer-section::before {
 button.btn:active {
     box-shadow: 1px 2px 6px #33333391; 
 }
-.btn:focus {
+.btn:focus ,.btn:active{
   outline: none;
 }
 /* Small devices (tablets, 768px and up) */
