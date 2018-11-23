@@ -94,7 +94,6 @@ var getgame =function(){
   getgame();
  
   $(document).on('click','.btn-fill',function(e){
-
     if(!chance) 
       return true;  
     //e.preventDefault();
@@ -104,7 +103,7 @@ var getgame =function(){
      elem.addClass('btn-disabled');
      setTimeout(function(){  
       elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
-      elem.addClass('static');
+      elem.addClass('btn-static');
       elem.removeClass('btn-disabled');
        $('.status-title').css('visibility','visible');
          }, 2000);
