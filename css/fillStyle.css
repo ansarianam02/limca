@@ -82,7 +82,17 @@
   height: 8rem;
   top: 0rem;
 }
-
+#partiImg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    display: inline-block;
+    height: 8rem;
+    width: 8rem;
+    top: 0rem;
+    left: -2rem;
+}
 
 .iconHolder {
     display: inline-block;
