@@ -6,34 +6,33 @@ $(function(){
         var prizeMap = {
                             1:{
                               text:'Philips Bass+ SHL3070 Headphones',
-                              imgUrl :''
+                              imgUrl :'img/gift.png'
                             },
                             2:{
                               text:'Anti-Theft Smart Bagpack',
-                              imgUrl :'',
+                              imgUrl :'img/ANTI_THEFT_BAG.png',
                             },
                             3:{
                               text:'Fujifilm Instax Square SQ6 Instant Camera',
-                              imgUrl :''
+                              imgUrl :'img/Fujifilm_Instax_Square.jpeg'
                             },
                             4:{
                               text:'Cannon EOS 3000D 18MP DSLR Camera',
-                              imgUrl :''
+                              imgUrl :'img/canon.png'
                             },
                             5:{
                               text:'Smart phone - iPhone X (256 GB)',
-                              imgUrl :''
+                              imgUrl :'img/Smartphone.png'
                             }
                           };
 
-                          
+
       var titleEmpty = "Awww! You have run out of your maaza stock! Buy more to fill more…";
       var tileOther = "";
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
       var nameMap ={ 0 : '--' , 1 : 'M' , 2 :'MA', 3 : 'MAA', 4 : 'MAAZ', 5: 'MAAZA'};
       var animationImage ;
 
-      
 /*    var level = 'MAAZ';
       //pass Api letter Number here
       var levelNo = parseInt(map[level]) ;
@@ -97,6 +96,8 @@ var getgame =function(){
               var txt ="Participate in lucky draw for level " + level;
               $('.btn-participate').html(txt);
               
+              //set participate modal image 
+              $('#partiImg').attr('src',prizeMap[stage].imgUrl);
 
               animationImage = new Image();
               animationImage.src = 'img/Animations/'+levelNo+'.gif';
