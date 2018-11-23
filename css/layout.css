@@ -178,7 +178,7 @@ section.footer-section::before {
   width: 100%;
   background:#f13332;
   color: #ffffff !important;
-  cursor: pointer;
+  cursor: pointer !important;
   font-size: 1.2rem;
   padding: 0.9rem 1rem;
 }
