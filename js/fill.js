@@ -35,6 +35,7 @@ $(function(){
     $result = [
     'type' => 'ERROR', 'msg' => 'Game not eligible’, 'data' => [], 'status' => 0, ];
     */
+var stage ;
 var getgame =function(){
 
     var form = new FormData();
@@ -58,7 +59,7 @@ var getgame =function(){
     $.ajax(settings).done(function (response) {
        var res =JSON.parse(response)
       if(res.status==1){
-        var stage = res.data.letterno;
+              stage = res.data.letterno;
               //pass Api letter Number here 
               var levelNo = parseInt(stage) ;
               var level = nameMap[stage];
