@@ -199,6 +199,9 @@ section.footer-section::before {
 .modal-dialog {
    margin: 20px;
 }
+button.btn:active {
+    box-shadow: 1px 2px 6px #33333391; 
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
