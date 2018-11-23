@@ -221,7 +221,9 @@
     e.preventDefault();
     var ele= $(this);
      ele.html('FILLING IN YOUR MAAZA…');
-     setTimeout(function(){  ele.html('SCAN ANOTHER QR CODE TO GET MAAZA');
+     setTimeout(function(){  
+
+        ele.html('SCAN ANOTHER QR CODE TO GET MAAZA');
          }, 3000);
 
      $('.btn-participate').show();

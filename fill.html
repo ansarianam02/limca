@@ -50,16 +50,26 @@
       <!-- regist Section -->
        <div class="row justify-content-md-center fillSection" style="display: block">
         <div class="col-md-10 col-md-offset-1">
-           <form class="mb-5" action="/action_page.php">
-            <div class="red-t my-4  font-weight-bold text-center regist-head status-title">  Click on Fill button to start filling <br/>  your     maaza      </div>       
+           <div class="mb-5 form" >
+            <div class="red-t my-4  font-weight-bold text-center regist-head status-title" style="visibility: hidden">  Click on Fill button to start filling <br/>  your     maaza      </div>       
 
-              <div class="fill-container staticImg animationImg my-5">
+              <div class="fill-container staticImg animationImg my-5 static">
                   <div class="fake">              
                       </div>
               </div>
 
               <div class="form-group my-4">
                 <button type="submit" class="btn btn-submit btn-fill btn-yellow-bordered">CLICK HERE TO FILL YOUR MAAZA</button>
+                </div>
+                
+                <div class="form-group" style="display: none">
+                  <label class=qrcode-text-btn>
+                      <input type=file
+                            id="btnQR"
+                             accept="image/*"
+                             capture=environment
+                             tabindex=-1>
+                    </label>
                 </div>
 
                <div class="form-group my-4">
@@ -88,7 +98,7 @@
 
               </div>  
            
-           </form>
+           </div>
         </div>
        </div>
     <!-- end regist section -->
@@ -234,7 +244,7 @@
               <p class="col-xs-7 col-xs-offset-5 my-5">
                  Buy more maza to fill more and participate in lucky draw and mega draw to win exciting gift prizes.
               </p>
-              <button type="submit" class="btn btn-submit btn-yellow"> Close and come back later</button>
+              <button type="submit" class="btn btn-submit btn-yellow" data-dismiss="modal"> Close and come back later</button>
           </div>
         </div>
       </div>
