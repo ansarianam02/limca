@@ -126,9 +126,14 @@ var getgame =function(){
     $('#btnQR').click();
 
    });
-    
-   $(document).on('','',function(){
+  var participateOnce = false;
+   $(document).on('click','.btn-participate',function(){
+      if(participateOnce)
+        return true;
 
+      participateOnce = true;
+      $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
+      $(this).html('Participate in mega Maaza draw');
    });
 
    $(document).on('click','.redirect-level-page',function(e){
