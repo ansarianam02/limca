@@ -94,8 +94,8 @@ var getgame =function(){
   getgame();
  
   $(document).on('click','.btn-fill',function(e){
-    $('#btnQR').click();
-   /* if(!chance) 
+
+    if(!chance) 
       return true;  
     //e.preventDefault();
     chance = false;
@@ -104,6 +104,7 @@ var getgame =function(){
      elem.addClass('btn-disabled');
      setTimeout(function(){  
       elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
+      elem.addClass('static');
       elem.removeClass('btn-disabled');
        $('.status-title').css('visibility','visible');
          }, 2000);
@@ -115,9 +116,14 @@ var getgame =function(){
      //set level dynamically
      //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
      $('.fill-container').removeClass('static');
-     $('.fill-container').css('background-image','url("'+animationImage.src+'")');*/
+     $('.fill-container').css('background-image','url("'+animationImage.src+'")');
   });
 
+  $(document).on('click','.btn-static',function(e){
+    $('#btnQR').click();
+
+   });
+    
    $(document).on('','',function(){
 
    });
