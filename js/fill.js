@@ -97,7 +97,7 @@ var getgame =function(){
               $('.btn-participate').html(txt);
               
               //set participate modal image 
-              $('#partiImg').attr('src',prizeMap[stage].imgUrl);
+              $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
 
               animationImage = new Image();
               animationImage.src = 'img/Animations/'+levelNo+'.gif';
