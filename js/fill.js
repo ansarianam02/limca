@@ -5,7 +5,7 @@ $(function(){
        var chance = true;
 
       var titleEmpty = "Awww! You have run out of your maaza stock! Buy more to fill more…";
-      var tileOther = "title msg ";
+      var tileOther = "";
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
       var nameMap ={ 0 : '--' , 1 : 'M' , 2 :'MA', 3 : 'MAA', 4 : 'MAAZ', 5: 'MAAZA'};
       var animationImage ;
@@ -62,6 +62,8 @@ var getgame =function(){
               //pass Api letter Number here 
               var levelNo = parseInt(stage) ;
               var level = nameMap[stage];
+              tileOther = "Congratulations! You can now participate in lucky draw for "+ level +"! The higher the level the higher the reward. Buy more to fill more to win more…";
+      
               //set depending on the level 
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
               //set animation Img
