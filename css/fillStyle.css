@@ -1,11 +1,12 @@
 .fill-container{
-   background-size: 100% 100%;
+   /*background-size: 100% 100%;*/
    background-repeat: no-repeat;
+   background-position: center !important;
    margin: 4rem 0 !important;
 }
 
 .fill-container .fake{
-    height: 13em;
+    height: 16em;
     width: 75%;
 }
 .navbar-header{
@@ -102,6 +103,4 @@
 }
 
 .static{
-    background-size: 79% 80% !important;
-    background-position: 67% 22% !important;
 }
