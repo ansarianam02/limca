@@ -83,9 +83,11 @@ var getgame =function(){
       if(res.status==1){
               stage = res.data.letterno;
               //pass Api letter Number here 
-              var levelNo = parseInt(stage) ;
+              var levelNo = parseInt(stage);
               var level = nameMap[stage];
-              tileOther = "Congratulations! You can now participate in lucky draw for "+ level +"! The higher the level the higher the reward. Buy more to fill more to win more…";
+              newLevel = nameMap[stage+1];
+              if (levelNo < 5) {
+              tileOther = "Congratulations! You can now participate in lucky draw for '"+ newLevel +"'! The higher the level the higher the reward. Buy more to fill more to win more…";
       
               //set depending on the level 
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
@@ -93,7 +95,7 @@ var getgame =function(){
               
 
                //button text with leve 
-              var txt ="Participate in lucky draw for level " + level;
+              var txt ="Participate in lucky draw for level '" + newLevel + "'";
               $('.btn-participate').html(txt);
               
               //set participate modal image 
@@ -105,8 +107,21 @@ var getgame =function(){
              
               // staticImg animationImg
                 //set level on yop
-              $('.level-stage').html(level);  
-  
+              $('.level-stage').html(level); 
+
+              } else {
+                //for the maaza mega draw 
+              $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
+                var txt ="Participate in the MAAZA MEGA DRAW"
+                $('.confmodaltext').html("Please confirm your participation in the MAAZA MEGA DRAW.")
+                $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
+              $('.btn-participate').html(txt);
+                $('.btn-fill').hide();
+                $('.btn-participate').show();
+                $('.level-stage').html(level);
+                var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
+                $('.status-title').html(megaTitle);
+              } 
       }
     });
 
@@ -120,14 +135,16 @@ var getgame =function(){
       return true;  
     //e.preventDefault();
     chance = false;
+    console.log(newLevel.length);
+    if(parseInt(newLevel.length) < 5) {
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
      elem.addClass('btn-disabled');
+     $('.status-title').html("Filling in your maaza...");
      setTimeout(function(){  
-      elem.html('SCAN ANOTHER QR CODE TO GET MAAZA');
+      elem.html('SCAN ANOTHER QR CODE');
       elem.addClass('btn-static');
       elem.removeClass('btn-disabled');
-
        //set seatus 
        if(stage==0)
           $('.status-title').html(titleEmpty);
@@ -135,17 +152,46 @@ var getgame =function(){
           $('.status-title').html(tileOther);
         
        //$('.status-title').css('visibility','visible');
-         }, 2000);
+         }, 2400);
 
-     $('.btn-participate').show();
-     $('.btn-later').show();
+     $('.btn-participate').delay(2400).show(0);
+     $('.btn-later').delay(2400).show(0);
+
+     setTimeout(function(){
+      $('.level-stage').html(newLevel);
+    }, 2400);
 
 
      //set level dynamically
      //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
      $('.fill-container').removeClass('static');
      $('.fill-container').css('background-image','url("'+animationImage.src+'")');
+
+     } else {
+      var elem = $(this);
+     elem.html('FILLING IN YOUR MAAZA…');
+     elem.addClass('btn-disabled');
+     $('.fill-container').removeClass('static');
+     $('.fill-container').css('background-image','url("'+animationImage.src+'")');
+                var txt ="Participate in the MAAZA MEGA DRAW"
+              $('.btn-participate').html(txt);
+                $('.btn-fill').delay(2400).hide(0);
+                $('.btn-participate').delay(2400).show(0);
+                
+                $('.status-title').html("Filling in your maaza...");
+                setTimeout(function(){
+                var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
+                $('.level-stage').html(newLevel);
+                $('.status-title').html(megaTitle);
+                }, 2400);
+     }
+
+
   });
+
+
+
+
 
   $(document).on('click','.btn-static',function(e){
     $('#btnQR').click();
@@ -158,7 +204,7 @@ var getgame =function(){
 
       participateOnce = true;
       $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
-      $(this).html('Participate in mega Maaza draw');
+      $(this).html('Participate in MAAZA MEGA DRAW');
    });
 
    $(document).on('click','.redirect-level-page',function(e){
