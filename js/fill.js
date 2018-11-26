@@ -100,7 +100,8 @@ var getgame =function(){
               $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
 
               animationImage = new Image();
-              animationImage.src = 'img/Animations/'+levelNo+'.gif';
+              var gifNo = levelNo+1;
+              animationImage.src = 'img/Animations/'+gifNo+'.gif';
              
               // staticImg animationImg
                 //set level on yop
