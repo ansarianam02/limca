@@ -23,6 +23,15 @@
 .btn-fill{
 	text-transform: uppercase !important;
 }
+
+.btn-fill:active{
+    transform: scale(0.98) translateY(2px);
+}
+
+.btn-fill:focus{
+    outline: thin !important;
+}
+
 .btn-yellow{
 	background-color: #f5a623 !important;
 	color: #ffffff;
