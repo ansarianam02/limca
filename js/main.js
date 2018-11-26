@@ -321,11 +321,11 @@ var settings = {
   "data": form
 }
 //remove it later
-window.location='fill.html';
+window.location='intro.html';
 $.ajax(settings).done(function (response) {
    var res =JSON.parse(response)
   if(res.status==1){
-  	window.location='fill.html';  	
+  	window.location='intro.html';  	
   }
 
 });

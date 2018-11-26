@@ -100,6 +100,7 @@ var getgame =function(){
               
               //set participate modal image 
               $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
+              $('#partiImg2').css('background-image','url('+ prizeMap[stage].imgUrl +')');
 
               animationImage = new Image();
               var gifNo = levelNo+1;
@@ -115,6 +116,7 @@ var getgame =function(){
                 var txt ="Participate in the MAAZA MEGA DRAW"
                 $('.confmodaltext').html("Please confirm your participation in the MAAZA MEGA DRAW.")
                 $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
+                $('#partiImg2').css('background-image','url('+ prizeMap[stage].imgUrl +')');
               $('.btn-participate').html(txt);
                 $('.btn-fill').hide();
                 $('.btn-participate').show();
@@ -152,11 +154,20 @@ var getgame =function(){
           $('.status-title').html(tileOther);
         
        //$('.status-title').css('visibility','visible');
+          //show reminder modal 
+         
          }, 2400);
 
      $('.btn-participate').delay(2400).show(0);
      $('.btn-later').delay(2400).show(0);
 
+     //show reminder popup
+     setTimeout(function(){
+       $('#reminderModal').modal('show'); 
+    }, 3800);
+
+
+      
      setTimeout(function(){
       $('.level-stage').html(newLevel);
     }, 2400);
@@ -183,14 +194,17 @@ var getgame =function(){
                 var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
                 $('.level-stage').html(newLevel);
                 $('.status-title').html(megaTitle);
+
                 }, 2400);
      }
 
 
   });
 
+  //click event for Modal button particiapte
+  $(document).on('click','.btn-confirm-participate',function(){
 
-
+  });
 
 
   $(document).on('click','.btn-static',function(e){
