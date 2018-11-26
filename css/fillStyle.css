@@ -91,7 +91,7 @@
   height: 8rem;
   top: 0rem;
 }
-#partiImg{
+.partiImg{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
