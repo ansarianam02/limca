@@ -144,7 +144,8 @@ var getgame =function(){
      elem.addClass('btn-disabled');
      $('.status-title').html("Filling in your maaza...");
      setTimeout(function(){  
-      elem.html('SCAN ANOTHER QR CODE');
+      // elem.html('SCAN ANOTHER QR CODE');
+      elem.hide();
       elem.addClass('btn-static');
       elem.removeClass('btn-disabled');
        //set seatus 
