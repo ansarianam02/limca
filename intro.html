@@ -41,16 +41,66 @@
   </nav>
 
 
-<div class="container main-area register bg">
+ <!--main partion -->
+<div class="container main-area register mt-5 pt-5">
   <div> <!--class="row center-border" -->
    
     <div class="right-partition">
-     <h3>intro page</h3>
-      <br/><br/><br/><br/>
-     <button type="button" class="btn btn-default redirect-fill" data-dismiss="modal">redirect to fill Page</button>
+      <!-- regist Section -->
+       <div class="row justify-content-md-center introSection" style="display: block">
+       <div class="col-md-10 col-md-offset-1">
+       <div class="form">
+        <div class="row justify-content-md-center gray-t py-3">
+            <div class="red-t my-4  font-weight-bold text-center regist-head"> HOW TO PLAY WIN </div>
+            
+            <div class="col-md-10 col-md-offset-1 mb-2 mt-2 text-center gray"> <h5 class="font-weight-bold">Fill all the letters of the MAAZA to reach at different levels and get a chance to win exciting prizes at different levels. </h5></div>
+            <div class="col-md-12 my-5 py-4 tild-corner tild-corner1">             
+              <div class="col-md-3 circle gift1 corner-maza level1 ">
+                
+              </div>
+              <div class="col-md-3 circle  gift2 corner-maza level2 ">
+                
+              </div>  
+              <div class="col-md-3 circle gift3 corner-maza level3">
+                
+              </div>  
+              <div class="col-md-3 circle gift4 corner-maza level4">
+                
+              </div> 
 
-     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-  </div>
+             <div class="col-md-12 text-center mt-5 mb-1">Choose to participate in any ONE of these levels</div>    
+            </div>            
+            
+        
+
+        
+             <div class="col-md-12 text-center my-1 font-weight-bold">and</div>
+
+            <div class="col-md-12 my-5 py-4 tild-corner tild-corner2">             
+                <div class="col-md-6 circle gift1 level1 ">
+                  
+                </div>
+                 
+                <div class="col-md-5 right-text">
+                  <span>Fill all the letters to WIN a <br/>IPHONE X - 32 GB</span>
+                </div> 
+
+            </div> 
+
+
+        </div>
+
+
+        <div class="col-md-12 mt-4">
+              <div class="form-group">
+                <button type="submit" class="btn btn-submit validate-otp">START PLAYING</button>
+               </div>
+            </div>  
+
+       </div></div>
+</div>
+</div>
+</div>
 </div>
  <!-- end main partion -->
 
@@ -121,10 +171,144 @@
  <script type="text/javascript" src="js/main.js"></script> 
 </body>
 <style>
-  
-  .right-partition{
-    background : white;
-  }
+.circle{
+  background: url(img/oval-s.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    display: inline-block;
+    min-width: 24%;
+    height: 8rem;
+    position: relative;
+}
+
+.gift1:before{
+  content: '';
+  background:url('img/ANTI_THEFT_BAG.png');
+  background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 1.85rem;
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18%;
+}
+.gift2::before{
+  content: '';
+  background:url('img/Fujifilm_Instax_Square.jpg');
+  background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 1.85rem;
+        left: 1.8rem;
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18%;
+}
+.gift3::before{
+  content: '';
+  background:url('img/canon.png');
+  background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 1.85rem;
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18%;
+}
+.gift4::before{
+  content: '';
+ content: '';
+  background:url('img/Smartphone.png');
+  background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 1.85rem;
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18%;
+}
+.tild-corner{
+ background-image: url(img/rectangle.png);
+    background-repeat: no-repeat;
+    background-size: 93% 100%;
+    background-position: center;
+    color: #fff;
+}
+.corner-maza::after{
+  right: 1.3rem !important;
+    top: 7.5rem !important; 
+}
+.tild-corner1::before {
+    content: '';
+    background: url(img/title-bg1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1.8rem;
+    right: 3rem;
+    height: 3rem;
+    width: 17rem;
+}
+.tild-corner2::before {
+    content: '';
+    background: url(img/title-bg2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1.8rem;
+    right: 3rem;
+    height: 3rem;
+    width: 17rem;
+}
+.gray{
+  color: #4a4a4a !important;
+}
+.tild-corner2 .circle{
+  min-width: 32%;
+  height: 10rem;
+}
+.tild-corner2 {
+  position: relative;
+}
+.tild-corner2::after{
+   content: '';
+    background: url(img/corner-maaza5.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1.8rem;
+    right: 3rem;
+    height: 3rem;
+    width: 17rem;
+}
+.right-text{
+  position: absolute;
+    right: 3rem;
+    top: 8rem;
+}
+.tild-corner2 .gift1:before {
+    content: '';
+    background: url(img/ANTI_THEFT_BAG.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 2.85rem;
+    width: 4rem;
+    left: 3rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18%;
+}
 </style>
 
 <script type="text/javascript">
