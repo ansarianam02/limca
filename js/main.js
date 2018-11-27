@@ -5,6 +5,7 @@
  var emptyOtp = "Please Enter OTP ";
  var registMandatory = "Please fill All Mandatory fields";
  var ValidEmailError = "Please Enter Valid Email ID";
+ var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
 
   $(document).on('click','.btn-mobile-submit',function(e){
   	hideError();
@@ -146,7 +147,7 @@ form.append("mobilenum",mobilenum);
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://maazaprod.bigcityexperiences.com/v1/api/checkuser",
+  "url": apiurl+"checkuser",
   "method": "POST",
   "headers": {
     "cache-control": "no-cache",
@@ -192,7 +193,7 @@ form.append("mobilenum",mobilenum);
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://maazaprod.bigcityexperiences.com/v1/api/registeruser",
+  "url": apiurl+"registeruser",
   "method": "POST",
   "headers": {
     "cache-control": "no-cache",
@@ -236,7 +237,7 @@ form.append("otp", otpNumber);
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://maazaprod.bigcityexperiences.com/v1/api/validateotp",
+  "url": apiurl+"validateotp",
   "method": "POST",
   "headers": {
     "cache-control": "no-cache",
@@ -309,7 +310,7 @@ form.append("state", state);
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://maazaprod.bigcityexperiences.com/v1/api/updateuser",
+  "url": apiurl+"updateuser",
   "method": "POST",
   "headers": {
     "cache-control": "no-cache",
