@@ -214,6 +214,16 @@ $.ajax(settings).done(function (response) {
 	   $('.otpSection').show();
 	   $('.err-container').hide();
 
+     var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("resendotp").classList.add("red-t");
+      }
+    },1000);
+
     }else{
 
     }
