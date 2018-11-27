@@ -14,7 +14,7 @@ $(function(){
                             },
                             3:{
                               text:'Fujifilm Instax Square SQ6 Instant Camera',
-                              imgUrl :'img/Fujifilm_Instax_Square.jpeg'
+                              imgUrl :'img/Fujifilm_Instax_Square.jpg'
                             },
                             4:{
                               text:'Cannon EOS 3000D 18MP DSLR Camera',
@@ -164,7 +164,7 @@ var getgame =function(){
      //show reminder popup
      setTimeout(function(){
        $('#reminderModal').modal('show'); 
-    }, 3800);
+    }, 3000);
 
 
       
