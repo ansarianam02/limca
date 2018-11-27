@@ -55,7 +55,7 @@
   text-align: center;
 }
 #saveModal .modal-body::before{
-	    background: url(../img/progress.png);
+	    background: url(../img/progressing.png);
     display: inline-block;
     height: 12rem;
     width: 10rem;
@@ -110,6 +110,10 @@
     background-repeat: no-repeat;
     background-size: auto;
     cursor: pointer;
+}
+
+.modaltext{
+    margin-bottom: 0rem !important;
 }
 .iconHolder.fb{
     background-image:  url(../img/facebook.png);    
