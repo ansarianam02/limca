@@ -142,7 +142,7 @@ var getgame =function(){
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
      elem.addClass('btn-disabled');
-     $('.status-title').html("Filling in your maaza...");
+     $('.status-title').html("Please wait while we fill the letter with yummy maaza...");
      setTimeout(function(){  
       // elem.html('SCAN ANOTHER QR CODE');
       elem.hide();
@@ -190,7 +190,7 @@ var getgame =function(){
                 $('.btn-fill').delay(4700).hide(0);
                 $('.btn-participate').delay(4700).show(0);
                 
-                $('.status-title').html("Filling in your maaza...");
+                $('.status-title').html("Please wait while we fill the letter with yummy maaza...");
                 setTimeout(function(){
                 var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
                 $('.level-stage').html(newLevel);
