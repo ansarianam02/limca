@@ -157,21 +157,21 @@ var getgame =function(){
        //$('.status-title').css('visibility','visible');
           //show reminder modal 
          
-         }, 2400);
+         }, 4700);
 
-     $('.btn-participate').delay(2400).show(0);
-     $('.btn-later').delay(2400).show(0);
+     $('.btn-participate').delay(4700).show(0);
+     $('.btn-later').delay(4700).show(0);
 
      //show reminder popup
      setTimeout(function(){
        $('#reminderModal').modal('show'); 
-    }, 3000);
+    }, 5300);
 
 
       
      setTimeout(function(){
       $('.level-stage').html(newLevel);
-    }, 2400);
+    }, 4700);
 
 
      //set level dynamically
@@ -187,8 +187,8 @@ var getgame =function(){
      $('.fill-container').css('background-image','url("'+animationImage.src+'")');
                 var txt ="Participate in the MAAZA MEGA DRAW"
               $('.btn-participate').html(txt);
-                $('.btn-fill').delay(2400).hide(0);
-                $('.btn-participate').delay(2400).show(0);
+                $('.btn-fill').delay(4700).hide(0);
+                $('.btn-participate').delay(4700).show(0);
                 
                 $('.status-title').html("Filling in your maaza...");
                 setTimeout(function(){
@@ -196,7 +196,7 @@ var getgame =function(){
                 $('.level-stage').html(newLevel);
                 $('.status-title').html(megaTitle);
 
-                }, 2400);
+                }, 4700);
      }
 
 
