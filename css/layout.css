@@ -207,7 +207,9 @@ button.btn:active {
   outline: none;
 }
 
-
+.otp-container{
+  cursor: pointer;
+}
 
 
 /* Small devices (tablets, 768px and up) */
