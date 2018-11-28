@@ -138,7 +138,6 @@ var getgame =function(){
       return true;  
     //e.preventDefault();
     chance = false;
-    console.log(newLevel.length);
     if(parseInt(newLevel.length) < 5) {
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
