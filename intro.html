@@ -93,7 +93,7 @@
 
         <div class="col-md-12 mt-4">
               <div class="form-group">
-                <button type="submit" class="btn btn-submit validate-otp">START PLAYING</button>
+                <button href="fill.html" class="btn startplaying">START PLAYING</button>
                </div>
             </div>  
 
@@ -171,8 +171,17 @@
  <script type="text/javascript" src="js/main.js"></script> 
 </body>
 <style>
+.startplaying{
+  width: 100%;
+    background: #f13332;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    font-size: 1.2rem;
+    padding: 0.9rem 1rem;
+}
+
 .circle{
-  background: url(img/oval-s.png);
+  background: url(img/oval.svg);
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -237,9 +246,9 @@
     border-radius: 18%;
 }
 .tild-corner{
- background-image: url(img/rectangle.png);
+ background-image: url(img/rectangle.svg);
     background-repeat: no-repeat;
-    background-size: 93% 100%;
+    background-size: 97% 100%;
     background-position: center;
     color: #fff;
 }
@@ -249,7 +258,7 @@
 }
 .tild-corner1::before {
     content: '';
-    background: url(img/title-bg1.png);
+    background: url(img/title-bg1.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
@@ -260,12 +269,12 @@
 }
 .tild-corner2::before {
     content: '';
-    background: url(img/title-bg2.png);
+    background: url(img/title-bg2.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: -1.8rem;
-    right: 14rem;
+    top: -1.5rem;
+    right: 16rem;
     height: 3rem;
     width: 17rem;
 }
@@ -273,27 +282,30 @@
   color: #4a4a4a !important;
 }
 .tild-corner2 .circle{
-  min-width: 32%;
-  height: 10rem;
+  min-width: 30%;
+    height: 13rem;
+    margin-left: 20px;
 }
 .tild-corner2 {
   position: relative;
 }
 .tild-corner2::after{
    content: '';
-    background: url(img/corner-maaza5.png);
+    background: url(img/corner-maaza5.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 3.2rem;
+    top: 2rem;
     right: 7rem;
-    height: 3rem;
+    height: 6rem;
     width: 13rem;
 }
 .right-text{
-  position: absolute;
-    right: 3rem;
+      position: absolute;
+    right: 5rem;
     top: 8rem;
+    text-align: center;
+    font-size: 12px;
 }
 .tild-corner2 .gift1:before {
     content: '';
@@ -301,10 +313,10 @@
     background-repeat: no-repeat;
     display: inline-block;
     position: absolute;
-    top: 2.85rem;
-    width: 4rem;
-    left: 3rem;
-    height: 4rem;
+    top: 4.3rem;
+    width: 6rem;
+    left: 2rem;
+    height: 5rem;
     background-size: cover;
     background-position: center;
     border-radius: 18%;
@@ -312,7 +324,7 @@
 </style>
 
 <script type="text/javascript">
- $(document).on('click','.redirect-fill',function(){
+ $(document).on('click','.startplaying',function(){
     window.location = "fill.html"
  })
 </script>
