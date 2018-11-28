@@ -80,8 +80,6 @@
     	updateuser()
     //window.location='fill.html';	
     }
-    
-  });
   function isEmpty(value){
 	  return (value == undefined || typeof value == undefined || value.length === 0);
 	}
@@ -382,7 +380,10 @@ var phonenumber = function (inputtxt){
     }else{
         return false;
    }
-}
+ }
+
+
+});
 
 
 /*

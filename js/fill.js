@@ -203,16 +203,17 @@ var getgame =function(){
 
   });
 
-  //click event for Modal button particiapte
-  $(document).on('click','.btn-confirm-participate',function(){
+  // $(document).on('click','.btn-static',function(e){
+  //   $('#btnQR').click();
 
-  });
+  //  });
 
-
-  $(document).on('click','.btn-static',function(e){
-    $('#btnQR').click();
+$(document).on('click','.btn-confirm-participate',function(e){
+    $('#partconfirmModal').modal('show');
+    $('#reminderModal').modal('hide');  
 
    });
+
   var participateOnce = false;
    $(document).on('click','.btn-participate',function(){
       if(participateOnce)
