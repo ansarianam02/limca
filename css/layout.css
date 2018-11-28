@@ -90,19 +90,19 @@ section.footer-section::before {
     top: 1rem;
 }
 .corner-maza.level1::after{
-    background-image: url(../img/corner-maaza1.png) !important;
+    background-image: url(../img/corner-maaza1.svg) !important;
 }
 .corner-maza.level2::after{
-   background-image: url(../img/corner-maaza2.png) !important;
+   background-image: url(../img/corner-maaza2.svg) !important;
 }
 .corner-maza.level3::after{
-    background-image: url(../img/corner-maaza3.png) !important;
+    background-image: url(../img/corner-maaza3.svg) !important;
 }
 .corner-maza.level4::after{
-    background-image: url(../img/corner-maaza4.png) !important;
+    background-image: url(../img/corner-maaza4.svg) !important;
 }
 .corner-maza.level5::after{
-    background-image: url(../img/corner-maaza5.png) !important;
+    background-image: url(../img/corner-maaza5.svg) !important;
 }
 /*.regSection form , .otpSection form ,.moreDetailSection form{
   padding: 1rem;
