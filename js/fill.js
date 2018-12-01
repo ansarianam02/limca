@@ -5,29 +5,28 @@ $(function(){
        var chance = true;
         var prizeMap = {
                             1:{
-                              text:'Philips Bass+ SHL3070 Headphones',
-                              imgUrl :'img/gift.png'
+                              text:'Smart Backpack',
+                              imgUrl :'img/Smart Backpack.png'
                             },
                             2:{
-                              text:'Anti-Theft Smart Bagpack',
-                              imgUrl :'img/ANTI_THEFT_BAG.png',
+                              text:'Headphone',
+                              imgUrl :'img/Headphone.png',
                             },
                             3:{
-                              text:'Fujifilm Instax Square SQ6 Instant Camera',
-                              imgUrl :'img/Fujifilm_Instax_Square.jpg'
+                              text:'Instant Camera',
+                              imgUrl :'img/Instant Camera.jpg'
                             },
                             4:{
-                              text:'Cannon EOS 3000D 18MP DSLR Camera',
-                              imgUrl :'img/canon.png'
+                              text:'DSLR Camera',
+                              imgUrl :'img/DSLR Camera.png'
                             },
                             5:{
-                              text:'Smart phone - iPhone X (256 GB)',
+                              text:'Smartphone',
                               imgUrl :'img/Smartphone.png'
                             }
                           };
 
-
-      var titleEmpty = "Awww! You have run out of your maaza stock! Buy more to fill more…";
+      var titleEmpty = "OOPS! Looks like we ran out of Maaza! Better luck next time!Drink more. Collect More. Win more with Maaza.Come back again and play to collect more letters.";
       var tileOther = "";
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
       var nameMap ={ 0 : '--' , 1 : 'M' , 2 :'MA', 3 : 'MAA', 4 : 'MAAZ', 5: 'MAAZA'};
@@ -81,15 +80,15 @@ var getgame =function(){
 
     $.ajax(settings).done(function (response) {
        var res =JSON.parse(response)
-      if(res.status==1){
-              stage = res.data.letterno;
+      if(res.status==1){ 
+              stage = res.data.letter;
               //pass Api letter Number here 
               var levelNo = parseInt(stage);
               var level = nameMap[stage];
               newLevel = nameMap[stage+1];
               if (levelNo < 5) {
-              tileOther = "Congratulations! You can now participate in lucky draw for '"+ newLevel +"'! The higher the level the higher the reward. Buy more to fill more to win more…";
-      
+              tileOther = "Drink more. Collect More. Win more with Maaza.Collect all the letters and stand a chance to win the Mega Prize!"
+              
               //set depending on the level 
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
               //set animation Img
@@ -110,6 +109,7 @@ var getgame =function(){
               // staticImg animationImg
                 //set level on yop
               $('.level-stage').html(level); 
+              $('.level-txt').html(prizeMap[stage].text);
 
               } else {
                 //for the maaza mega draw 
@@ -122,6 +122,8 @@ var getgame =function(){
                 $('.btn-fill').hide();
                 $('.btn-participate').show();
                 $('.level-stage').html(level);
+                $('.level-txt').html(prizeMap[stage].texts);
+
                 var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
                 $('.status-title').html(megaTitle);
               } 
@@ -215,14 +217,20 @@ $(document).on('click','.btn-confirm-participate',function(e){
 
   var participateOnce = false;
    $(document).on('click','.btn-participate',function(){
-      if(participateOnce)
+      if(participateOnce){       
         return true;
+      }
 
       participateOnce = true;
       $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });
 
+$(document).on('click','#participateModal .btn-submit',function(){
+    $('#participateModal').modal('hide');
+    $('#participateModal .btn-submit').html('close')
+});
+ 
    $(document).on('click','.redirect-level-page',function(e){
         window.location ="winner-list.html";    
   });

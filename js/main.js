@@ -37,10 +37,14 @@ $.ajax(settings).done(function (response) {
   
   var res =JSON.parse(response)
   if(res.status==1){
+    window.location = "intro.html";
+  }
+  else{
     // show More detail section
     $('.otpSection').hide();
     $('.moreDetailSection').show();
   }
+
  });
 
 }
@@ -154,15 +158,7 @@ $.ajax(settings).done(function (response) {
      $('.otpSection').show();
      $('.err-container').hide();
 
-     var timeleft = 30;
-    var downloadTimer = setInterval(function(){
-    timeleft--;
-    document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft <= 0){
-        clearInterval(downloadTimer);
-        document.getElementById("resendotp").classList.add("red-t");
-      }
-    },1000);
+    runTimer();
 
     }else{
 
@@ -176,6 +172,19 @@ $.ajax(settings).done(function (response) {
 	}	
     
   });
+function runTimer(){
+   var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){        
+        clearInterval(downloadTimer);
+        $('.resendMsg').hide();
+        document.getElementById("resendotp").classList.add("red-t");       
+      }
+    },1000);
+
+}
 
   $(document).on('click','.validate-otp',function(e){
      //e.preventDefault();
@@ -223,6 +232,25 @@ $.ajax(settings).done(function (response) {
     	updateuser()
     //window.location='fill.html';	
     }
+
+   }); 
+  //resendotp
+  var resendAttempt = 0 , resendMsg='';
+  $(document).on('click','.otp-container',function(e){
+    var isResendAvailable = $('#resendotp').hasClass('red-t');
+    if(!isResendAvailable)
+        return false;
+
+    if(resendAttempt <= 3){ 
+      //remove red-t active status from link     
+      $('#resendotp').removeClass('red-t');
+
+      resendAttempt++;
+      resendotp();
+      
+    }
+      
+  });
   function isEmpty(value){
 	  return (value == undefined || typeof value == undefined || value.length === 0);
 	}
@@ -388,21 +416,31 @@ $.ajax(settings).done(function (response) {
 'type' => 'ERROR', 'msg' => 'Do check first’, 'status' => 0, ];
 */
 var resendotp =function(){
+  
 
-var tokenVal = '';
-var mobilenumVal = '';
+var form = new FormData();
+form.append("token", "123123123");
 
-$.ajax({
-  type: "GET",
-  url: baseUrl + "resendotp",
-  data: {
-	  	token: tokenVal ,
-	  	mobilenum :tokenVal
-  	},
-  cache: false,
-  success: function(data){
-     $("#resultarea").text(data);
-  }
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://maazaprod.bigcityexperiences.com/v1/api/resendotp",
+  "method": "POST",
+  "headers": {
+    "cache-control": "no-cache",
+    "postman-token": "2438cbd2-b3fe-2cee-5322-d33648724e86"
+  },
+  "processData": false,
+  "contentType": false,
+  "mimeType": "multipart/form-data",
+  "data": form
+}
+
+$.ajax(settings).done(function (response) {
+  //run timer 
+  runTimer();
+  $('.resendMsg').show();
+  console.log(response);
 });
 
 }
@@ -459,7 +497,6 @@ var phonenumber = function (inputtxt){
  }
 
 
-});
 
 
 /*
