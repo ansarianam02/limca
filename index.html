@@ -64,12 +64,12 @@
    
     <div class="right-partition">
       <!-- regist Section -->
-       <div class="row justify-content-md-center regSection" style="display: block">
+       <div class="row justify-content-md-center regSection" style="display: block;">
         <div class="col-md-10 col-md-offset-1">
        <div class="mb-5 form">
         <div class="red-t my-4  font-weight-bold text-center regist-head">  PLEASE ENTER YOUR MOBILE NUMBER </div>        
        <div class="form-group my-5">
-        <input type="number" class="form-control" id="phonenumber" placeholder="Mobile number*">
+        <input type="number" class="form-control" id="phonenumber" value="9874563215" placeholder="Mobile number*">
       </div>
        
       <div class="form-group form-check">
@@ -77,13 +77,7 @@
         <input class="form-check-input" id="terms" type="checkbox"> I agree to program’s <a class="red-t cursor" data-toggle="modal" data-target="#myModal"> terms and conditions </a>
         </p>
       </div>
-      <div class="form-group  text-center">
-      <label class="form-check-label">
-         <div class="g-recaptcha" data-sitekey="=== Your site key ==="></div>
-        </label>
-      </div>
-
-
+      
        <div class="form-group">
         <button type="submit" class="btn btn-submit btn-mobile-submit">Submit</button>
         </div>
@@ -110,7 +104,10 @@
               <div class="form-check-label" id="resendotp">
                 Resend OTP 
                 </div>
-                <h5>in <span id="countdowntimer">30</span> seconds</h5>
+                <p class="resendMsg" style="display: none">OTP is sent again! </p>
+                <h5 class="timeContainer">in <span id="countdowntimer">30</span> seconds</h5>
+
+
             </div>           
 
             <div class="col-md-12 mt-4">
@@ -130,7 +127,7 @@
        <div class="row justify-content-md-center moreDetailSection mb-5" style="display: none;">
         <div class="col-md-10 col-md-offset-1">
              <div class="form">
-              <div class="red-t m-4  font-weight-bold text-center regist-head"> WE NEED SOME MORE INFORMATION</div>
+              <div class="red-t m-4  font-weight-bold text-center regist-head"> INSTRUCTIONS AND REGISTRATION </div>
               
               <div class="form-group">        
                 <input type="text" class="form-control" id="firstname" placeholder="Full name*">
@@ -138,6 +135,10 @@
               <div class="form-group">
                 <input type="email" class="form-control" id="email" placeholder="Email ID*">
               </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="age" placeholder="Please enter your Age">
+              </div>
+
                <div class="form-group">
                 <select class="form-control" id="city" placeholder="">
                   <option value="" disabled selected>City you reside in*</option>

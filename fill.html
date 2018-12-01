@@ -31,7 +31,11 @@
       </div>
       <div class="navbar-collapse collapse" id="myNavbar" style="height: 1px;" aria-expanded="false">
         
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">               
+          <li><a class="redirect-level-page red-t" >See lucky draw winners</a>
+              </li>
+         <li><a data-toggle="modal" data-target="#luckyModal" class="red-t">See rewards for different levels </a>
+              </li>      
           <li><a data-toggle="modal" data-target="#myModal" class="red-t">Terms and conditions</a>
               </li>
           <li><a data-toggle="modal" data-target="#contactModal" class="red-t">Contact us</a>
@@ -59,7 +63,7 @@
               </div>
 
               <div class="form-group my-4">
-                <button type="submit" class="btn btn-submit btn-fill btn-yellow-bordered">CLICK HERE TO FILL YOUR MAAZA</button>
+                <button type="submit" class="btn btn-submit btn-fill btn-yellow-bordered">Click on the button below to start filling Maaza!</button>
                 </div>
                 
                 <div class="form-group" style="display: none">
@@ -77,14 +81,14 @@
                 </div>
 
                <div class="form-group my-4">
-                <button type="submit" class="btn btn-submit btn-later btn-red-bordered" data-toggle="modal" data-target="#saveModal">Save and come back later with more maza?</button>
+                <button type="submit" class="btn btn-submit btn-later btn-red-bordered" data-toggle="modal" data-target="#saveModal">I want to participate later for Higher Prize</button>
                 </div>
 
               <div class="form-group  text-center">
-              <label class="form-check-label">
+              <!-- <label class="form-check-label">
                 <p class="my-3 red-t redirect-level-page" > See lucky draw winners </p>
                 <p class="my-3 red-t " data-toggle="modal" data-target="#luckyModal" > See rewards for different levels </p>
-                </label>
+                </label> -->
               </div>
               <div class="form-group text-center">  
                    <p> Share this with your friends </p>
@@ -206,7 +210,7 @@
         <div class="container">
           <div class="row">
         <p class="text-center mt-2" >
-           Are you sure you want to participate in the lucky draw for this level? You will not be eligible to participate in any other lucky draw except the MAAZA mega draw (when you fill the complete MAAZA).
+           Congratulations! You have now entered the lucky draw for the letters <span class="level-stage"> </span> and stand a chance to win <span class="level-txt"></span>. Drink more. Collect More. Win more with Maaza.Collect all the letters and stand a chance to win the Mega Prize!
         </p>
 
         <div class="list-container">
@@ -215,7 +219,8 @@
             <li class="my-2"> <div id="partiImg" class="partiImg"></div><span >See lucky draw rewards for different levels</span></li>
            </ul>
         </div>
-        <button type="submit" class="btn btn-submit btn-yellow"> Confirm participation for level <span class="level-stage"> </span></button>
+       <!--  <button type="submit" class="btn btn-submit btn-yellow"> Confirm participation for level <span class="level-stage"> </span></button> -->
+        <button type="submit" class="btn btn-submit btn-yellow"> Close </span></button>
         <p class="text-center my-5 red-t font-weight-bold " data-dismiss="modal" data-toggle="modal" data-target="#luckyModal">
            See lucky draw rewards for <br/> different levels
         </p>
