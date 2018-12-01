@@ -211,7 +211,16 @@ button.btn:active {
   cursor: pointer;
 }
 
-
+@media (min-width: 992px) {
+  .main-area{
+        max-width: 445px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .main-area{
+        max-width: 445px !important;
+  }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
@@ -219,4 +228,4 @@ button.btn:active {
 @media (min-width: @screen-md-min) { ... }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
+@media (min-width: @screen-lg-min) {}
