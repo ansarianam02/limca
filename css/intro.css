@@ -101,13 +101,14 @@
     background-size: contain;
     background-position: center;
     color: #fff;
+    position: relative;
 }
 .corner-maza::after{
   right: 1.3rem !important;
     top: 9rem !important; 
 }
 .chse-txt{
-    font-size: 11rem;
+    font-size: 11px;
     white-space: nowrap;
 }
 .tild-corner1::before {
@@ -116,7 +117,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 1.8rem;
+    top: -0.7rem;
     right: 3rem;
     height: 3rem;
     width: 17rem;
