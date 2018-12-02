@@ -18,11 +18,15 @@
     position: relative;
 }
 .introtxt{
-    position: absolute;
+       position: absolute;
     bottom: -1.7rem;
-    left: 1.8rem;
+    /* left: 1.8rem; */
+    /* margin-top: 7rem; */
     font-size: 8px;
-        white-space: nowrap;
+    white-space: nowrap;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .introtxt1{
     position: absolute;
@@ -111,7 +115,10 @@
     font-size: 11px;
     white-space: nowrap;
 }
-.tild-corner1::before {
+.tildlabel{
+    position: relative;
+}
+.tildlabel::before {
     content: '';
     background: url(../img/title-bg1.svg);
     background-size: 100% 100%;
