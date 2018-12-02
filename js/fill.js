@@ -3,6 +3,7 @@ $(function(){
       $('.btn-participate').hide();
       $('.btn-later').hide(); 
        var chance = true;
+        var tokenVal = '123123123';
         var prizeMap = {
                             1:{
                               text:'Smart Backpack',
@@ -61,7 +62,7 @@ var stage ;
 var getgame =function(){
 
     var form = new FormData();
-    form.append("token", "123123123");
+    form.append("token", tokenVal);
 
     var settings = {
       "async": true,
@@ -134,12 +135,43 @@ var getgame =function(){
 
   //call game
   getgame();
- 
+  
+  function closegame(iscomplete,userchoice){
+    var form = new FormData();
+    var isComplete = iscomplete;
+    var userchoice = userchoice;
+    form.append("token", tokenVal);
+    form.append("iscomplete", iscomplete);
+    form.append("userchoice", userchoice);
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://maazaprod.bigcityexperiences.com/v1/api/closegame",
+      "method": "POST",
+      "headers": {
+        "cache-control": "no-cache",
+        "postman-token": "6dd426e5-7e3b-852c-76a5-5ea41f8f8a09"
+      },
+      "processData": false,
+      "contentType": false,
+      "mimeType": "multipart/form-data",
+      "data": form
+    }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+  }
+
   $(document).on('click','.btn-fill',function(e){
     if(!chance) 
       return true;  
     //e.preventDefault();
     chance = false;
+
+    //close game
+    closegame("true","1");
     if(parseInt(newLevel.length) < 5) {
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
@@ -222,6 +254,8 @@ $(document).on('click','.btn-confirm-participate',function(e){
       }
 
       participateOnce = true;
+      //close game
+      closegame("true","1")
       $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });

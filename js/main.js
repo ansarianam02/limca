@@ -49,7 +49,7 @@ $.ajax(settings).done(function (response) {
 
 }
 
-var updateuser =function(name,email,city,state){
+var updateuser =function(name,email,age,city,state){
 
 var tokenVal = '';
 var mobilenumVal = '';
@@ -58,6 +58,7 @@ var form = new FormData();
 form.append("token", tokenVal);
 form.append("name", name);
 form.append("email", email);
+form.append("age", age);
 form.append("city", city);
 form.append("state", state);
 
@@ -218,6 +219,7 @@ function runTimer(){
     var firstVal = $('#firstname').val();
     var emailVal = $('#email').val();
     var cityVal = $('#city').val();
+    var age =  $('#age').val();
     var stateVal = $('#state').val()
     var isEmailValid = isEmail(emailVal);
    
@@ -229,8 +231,9 @@ function runTimer(){
     	return true;
     }else{
     	//redirect to next Page
-    	updateuser()
-    //window.location='fill.html';	
+    	updateuser(firstVal,emailVal,age,cityVal,stateVal);
+      
+      //window.location='fill.html';	
     }
 
    }); 
