@@ -10,8 +10,8 @@
 .circle{
   background: url(../img/oval.svg);
     background-repeat: no-repeat;
-    background-size: 72%;
-        background-position: 70% 46%;
+    background-size: 80%;
+    background-position: center;
     display: inline-block;
     min-width: 24%;
     height: 8rem;
@@ -19,23 +19,13 @@
 }
 .introtxt{
     position: absolute;
-    bottom: -1.7rem;
-    left: 1.3rem;
-    font-size: 8px;
-        white-space: nowrap;
-}
-.introtxt1{
-    position: absolute;
-    bottom: -2.8rem;
-    left: 1.3rem;
-    font-size: 8px;
+    bottom: -2.1rem;
+    left: 0.6rem;
+    font-size: 9px;
         white-space: nowrap;
 }
 .introtxt span{
     margin-left: 2rem;
-}
-.introtxt4 span{
-    margin-left: 1.2rem;   
 }
 .gift1:before{
   content: '';
@@ -58,7 +48,7 @@
     display: inline-block;
     position: absolute;
     top: 1.85rem;
-        left: 1.9rem;
+        left: 1.8rem;
     width: 4rem;
     height: 5rem;
        background-size: 100% 100%;
@@ -72,7 +62,7 @@
     display: inline-block;
     position: absolute;
     top: 2.2rem;
-    left: 2.4rem;
+    left: 2rem;
     width: 3.3rem;
     height: 3.5rem;
        background-size: 100% 100%;
@@ -87,7 +77,7 @@
     display: inline-block;
     position: absolute;
     top: 1.85rem;
-    left:2.2rem;
+    left:1.5rem;
     width: 4rem;
     height: 4rem;
        background-size: 100% 100%;
@@ -97,13 +87,13 @@
 .tild-corner{
  background-image: url(../img/rectangle.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 97% 100%;
     background-position: center;
     color: #fff;
 }
 .corner-maza::after{
   right: 1.3rem !important;
-    top: 9.5rem !important; 
+    top: 9rem !important; 
 }
 .tild-corner1::before {
     content: '';
@@ -111,19 +101,19 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 1.8rem;
+    top: -1.8rem;
     right: 3rem;
     height: 3rem;
     width: 17rem;
 }
 .tild-corner2::before {
-   content: '';
+    content: '';
     background: url(../img/title-bg2.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: -1.0rem;
-    right: 12rem;
+    top: -1.5rem;
+    right: 16rem;
     height: 3rem;
     width: 17rem;
 }
