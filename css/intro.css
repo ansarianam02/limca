@@ -190,11 +190,14 @@
     position: absolute;
     top: 4.2rem;
     width: 3.5rem;
-    left: 3.2rem;
+    /*left: 3.2rem;*/
     height: 4rem;
     background-size: cover;
     background-position: center;
     border-radius: 18%;
+     -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left:55%;
 }
 
 @media (min-width: 992px) {
