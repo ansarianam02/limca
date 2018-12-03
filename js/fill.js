@@ -7,7 +7,7 @@ $(function(){
         var prizeMap = {
                             1:{
                               text:'Smart Backpack',
-                              imgUrl :'img/Smart Backpack.png'
+                              imgUrl :'img/SmartBackpack.png'
                             },
                             2:{
                               text:'Headphone',
@@ -15,11 +15,11 @@ $(function(){
                             },
                             3:{
                               text:'Instant Camera',
-                              imgUrl :'img/Instant Camera.jpg'
+                              imgUrl :'img/InstantCamera.png'
                             },
                             4:{
                               text:'DSLR Camera',
-                              imgUrl :'img/DSLR Camera.png'
+                              imgUrl :'img/DSLRCamera.png'
                             },
                             5:{
                               text:'Smartphone',
@@ -87,6 +87,11 @@ var getgame =function(){
               var levelNo = parseInt(stage);
               var level = nameMap[stage];
               newLevel = nameMap[stage+1];
+              var imgName =prizeMap[stage].text;
+              var imgPath = prizeMap[stage].imgUrl;
+
+
+              console.log('Image Path is -------------- '+imgPath);
               if (levelNo < 5) {
               tileOther = "Drink more. Collect More. Win more with Maaza. Collect all the letters and stand a chance to win the Mega Prize!"
               
@@ -100,8 +105,10 @@ var getgame =function(){
               $('.btn-participate').html(txt);
               
               //set participate modal image 
-              $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
-              $('#partiImg2').css('background-image','url('+ prizeMap[stage].imgUrl +')');
+              $('#partiImg').css('background-image','url('+ imgPath +')');
+              $('#partiImg2').css('background-image','url('+ imgPath +')');
+              $('#partiImg3').css('background-image','url('+ imgPath +')');
+              $('.rewardname').html(prizeMap[stage].text);
 
               animationImage = new Image();
               var gifNo = levelNo+1;
@@ -117,13 +124,15 @@ var getgame =function(){
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
                 var txt ="Participate in the MAAZA MEGA DRAW"
                 $('.confmodaltext').html("Please confirm your participation in the MAAZA MEGA DRAW.")
-                $('#partiImg').css('background-image','url('+ prizeMap[stage].imgUrl +')');
-                $('#partiImg2').css('background-image','url('+ prizeMap[stage].imgUrl +')');
+                $('#partiImg').css('background-image','url('+ imgPath +')');
+                $('#partiImg2').css('background-image','url('+ imgPath +')');
+                $('#partiImg3').css('background-image','url('+ imgPath +')');
+                $('.rewardname').html(imgName);
               $('.btn-participate').html(txt);
                 $('.btn-fill').hide();
                 $('.btn-participate').show();
                 $('.level-stage').html(level);
-                $('.level-txt').html(prizeMap[stage].texts);
+                $('.level-txt').html(imgName);
 
                 var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
                 $('.status-title').html(megaTitle);
