@@ -80,7 +80,7 @@ var getgame =function(){
     }
 
     $.ajax(settings).done(function (response) {
-       var res =JSON.parse(response)
+       var res =JSON.parse(response);
       if(res.status==1){ 
               stage = res.data.letter;
               //pass Api letter Number here 
@@ -88,7 +88,7 @@ var getgame =function(){
               var level = nameMap[stage];
               newLevel = nameMap[stage+1];
               if (levelNo < 5) {
-              tileOther = "Drink more. Collect More. Win more with Maaza.Collect all the letters and stand a chance to win the Mega Prize!"
+              tileOther = "Drink more. Collect More. Win more with Maaza. Collect all the letters and stand a chance to win the Mega Prize!"
               
               //set depending on the level 
               $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
@@ -262,7 +262,18 @@ $(document).on('click','.btn-confirm-participate',function(e){
 
 $(document).on('click','#participateModal .btn-submit',function(){
     $('#participateModal').modal('hide');
-    $('#participateModal .btn-submit').html('close')
+    $('#participateModal .btn-submit').html('close');
+    $('.btn-participate').hide();
+    $('.btn-later').html("Close and come back later")
+
+});
+
+$(document).on('click','#reminderModal .btn-submit',function(){
+    $('#participateModal').modal('hide');
+    $('#participateModal .btn-submit').html('close');
+    $('.btn-participate').hide();
+    $('.btn-later').html("Close and come back later")
+
 });
  
    $(document).on('click','.redirect-level-page',function(e){
