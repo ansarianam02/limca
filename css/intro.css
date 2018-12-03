@@ -1,11 +1,14 @@
 .startplaying{
-  width: 100%;
+      margin-left: -2rem;
+    width: 111%;
     background: #f13332;
     color: #ffffff !important;
     cursor: pointer !important;
-    font-size: 1.2rem;
-    padding: 0.9rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
     box-shadow: 3px 3px 9px 1px #b34949;
+    margin-top: -25px;
 }                            
 .circle{
   background: url(../img/oval.svg);
@@ -38,7 +41,7 @@
         display: none
 }
 .introtxt span{
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 .introtxt4 span{
     margin-left: 1.2rem;   
@@ -137,8 +140,8 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: -2.7rem;
-    right: 3rem;
+    top: -1.7rem;
+    right: 2rem;
     height: 3rem;
     width: 17rem;
 }
@@ -149,7 +152,7 @@
     background-repeat: no-repeat;
     position: absolute;
     top: -1.0rem;
-    right: 12rem;
+    right: 15rem;
     height: 3rem;
     width: 17rem;
 }
