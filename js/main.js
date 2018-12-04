@@ -1,3 +1,7 @@
+
+
+
+
  //first Page
  var validMobileNumber = "Please Enter Valid Mobile Number .";
  var emptyMobileNumber = "Please Enter Mobile Number to continue";
@@ -7,6 +11,10 @@
  var ValidEmailError = "Please Enter Valid Email ID";
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
  var tokenVal = '123123123';
+
+
+//Initial call to get token val
+ initCall();
  function hideError(){
     $('.err-container').hide();
    }
@@ -49,6 +57,46 @@ $.ajax(settings).done(function (response) {
 
 }
 
+
+function initCall(){
+  //readParameter and redirect
+var tree=new URLSearchParams(window.location.search);
+var packagecode = tree.get('packagecode');
+if(packagecode==null){
+  console.log('Redirected !!');
+    tokenVal = localStorage.getItem('tokenVal');
+}
+else{
+  console.log('With token !!')
+    var user = "muser1";
+    var pass= "@122asdas9898";
+    var form = new FormData();
+    form.append("user", user );
+    form.append("pass", pass);
+    form.append("code", packagecode);
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://maazaprod.bigcityexperiences.com/v1/api/authenticate",
+      "method": "POST",
+      "headers": {
+        "cache-control": "no-cache",
+        "postman-token": "93ec2fb4-ae26-c071-8ac7-e2fdb1986372"
+      },
+      "processData": false,
+      "contentType": false,
+      "mimeType": "multipart/form-data",
+      "data": form
+    }
+
+    $.ajax(settings).done(function (response) {
+        //set token value
+         localStorage.setItem('tokenVal', response.token);
+         window.location.href = "https://app-maaza.herokuapp.com/index.html";
+    });
+  }
+}
 var updateuser =function(name,email,age,city,state){
 
 var tokenVal = '';

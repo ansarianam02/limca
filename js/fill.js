@@ -24,6 +24,10 @@ $(function(){
                             5:{
                               text:'Smartphone',
                               imgUrl :'img/Smartphone.png'
+                            },
+                            6:{
+                              text:'Smartphone',
+                              imgUrl :'img/Smartphone.png'
                             }
                           };
 
@@ -79,7 +83,7 @@ var getgame =function(){
       "data": form
     }
 
-    $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function (response) {debugger;
        var res =JSON.parse(response);
       if(res.status==1){ 
               stage = res.data.letter;
@@ -87,8 +91,8 @@ var getgame =function(){
               var levelNo = parseInt(stage);
               var level = nameMap[stage];
               newLevel = nameMap[stage+1];
-              var imgName =prizeMap[stage].text;
-              var imgPath = prizeMap[stage].imgUrl;
+              var imgName =prizeMap[stage+1].text;
+              var imgPath = prizeMap[stage+1].imgUrl;
 
 
               console.log('Image Path is -------------- '+imgPath);
@@ -117,6 +121,7 @@ var getgame =function(){
               // staticImg animationImg
                 //set level on yop
               $('.level-stage').html(level); 
+              localStorage.setItem('level',level);
               $('.level-txt').html(prizeMap[stage].text);
 
               } else {
@@ -263,8 +268,7 @@ $(document).on('click','.btn-confirm-participate',function(e){
       }
 
       participateOnce = true;
-      //close game
-      closegame("true","1")
+     
       $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });
@@ -291,6 +295,11 @@ $(document).on('click','#reminderModal .btn-submit',function(){
 
    $(document).on('click','.btn-submit',function(e){
      //e.preventDefault();    
+   });
+
+   $(document).on('click','.btn-closegame',function(e){
+      //close game
+      closegame("true","1")   
    });
   
 
