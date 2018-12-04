@@ -85,11 +85,19 @@
     position: relative;
     
 }
-.list-container  li img{
-  position: absolute;
-  left: -4rem;
-  height: 8rem;
-  top: 0rem;
+.list-container  li .img-container{
+    position: absolute;
+    left: -1.8rem;
+    height: 7rem;
+    width: 6rem;
+    top: -0.7rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.list-container  li .img-container .imgBlock{    
+    height: 100%;
+    width: 100%;
 }
 .partiImg{
     background-size: contain;
