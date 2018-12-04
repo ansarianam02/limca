@@ -263,13 +263,13 @@ $(document).on('click','.btn-confirm-participate',function(e){
 
   var participateOnce = false;
    $(document).on('click','.btn-participate',function(){
-      if(participateOnce){       
+      /*if(participateOnce){       
         return true;
-      }
+      }*/
 
       participateOnce = true;
      
-      $(this).addClass('btn-disabled').removeAttr('data-toggle').removeAttr('data-target');;
+      $(this).removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });
 
