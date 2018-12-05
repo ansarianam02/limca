@@ -95,7 +95,6 @@ var getgame =function(){
               var imgPath = prizeMap[stage+1].imgUrl;
 
 
-              console.log('Image Path is -------------- '+imgPath);
               if (levelNo < 5) {
               tileOther = "Drink more. Collect More. Win more with Maaza. Collect all the letters and stand a chance to win the Mega Prize!"
               
@@ -189,7 +188,7 @@ var getgame =function(){
     if(parseInt(newLevel.length) < 5) {
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
-     elem.addClass('btn-disabled');
+//      elem.addClass('btn-disabled');
      $('.status-title').html("Please wait while we fill the letter with yummy maaza...");
      setTimeout(function(){  
       // elem.html('SCAN ANOTHER QR CODE');
