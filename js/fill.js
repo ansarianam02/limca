@@ -83,7 +83,7 @@ var getgame =function(){
       "data": form
     }
 
-    $.ajax(settings).done(function (response) {debugger;
+    $.ajax(settings).done(function (response) {
        var res =JSON.parse(response);
       if(res.status==1){ 
               stage = res.data.letter;
