@@ -189,7 +189,7 @@ var getgame =function(){
     if(parseInt(newLevel.length) < 5) {
     var elem = $(this);
      elem.html('FILLING IN YOUR MAAZA…');
-     elem.addClass('btn-disabled');
+     // elem.addClass('btn-disabled');
      $('.status-title').html("Please wait while we fill the letter with yummy maaza...");
      setTimeout(function(){  
       // elem.html('SCAN ANOTHER QR CODE');
@@ -269,7 +269,7 @@ $(document).on('click','.btn-confirm-participate',function(e){
 
       participateOnce = true;
      
-      $(this).removeAttr('data-toggle').removeAttr('data-target');;
+      // $(this).removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });
 
