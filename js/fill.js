@@ -122,7 +122,7 @@ var getgame =function(){
                 //set level on yop
               $('.level-stage').html(level); 
               localStorage.setItem('level',level);
-              $('.level-txt').html(prizeMap[stage].text);
+              $('.level-txt').html(prizeMap[stage+1].text);
 
               } else {
                 //for the maaza mega draw 
