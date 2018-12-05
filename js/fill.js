@@ -112,7 +112,7 @@ var getgame =function(){
               $('#partiImg2').css('background-image','url('+ imgPath +')');
               $('#partiImg3').css('background-image','url('+ imgPath +')');
               $('.rewardname').html(prizeMap[stage+1].text);
-              $('#partrewardName").html(prizeMap[stage+1].text);
+              $('#partrewardName').html(prizeMap[stage+1].text);
 
               animationImage = new Image();
               var gifNo = levelNo+1;
