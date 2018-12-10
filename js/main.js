@@ -10,7 +10,7 @@
  var registMandatory = "Please fill All Mandatory fields";
  var ValidEmailError = "Please Enter Valid Email ID";
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
- var tokenVal = '123123123';
+ var tokenVal = '';
 
 
 //Empty local storage on page hit
