@@ -3,7 +3,7 @@ $(function(){
       $('.btn-participate').hide();
       $('.btn-later').hide(); 
        var chance = true;
-        var tokenVal = '123123123';
+        var tokenVal = localStorage.getItem('tokenVal');
         var prizeMap = {
                             1:{
                               text:'Smart Backpack',
