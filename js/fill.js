@@ -142,6 +142,10 @@ var getgame =function(){
                 var megaTitle = "Congratulations! You have reached the MAAZA level, you can now participate in the MAAZA MEGA DRAW";
                 $('.status-title').html(megaTitle);
               } 
+      }else{
+        $('.fillSection').css('visibility','hidden');
+        $('.err-msg').html('Something went wrong !!');
+        $('.err-container').show();
       }
     });
 

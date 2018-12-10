@@ -53,6 +53,9 @@ $.ajax(settings).done(function (response) {
     showError(res.msg);
   }
   else{
+    //call checkl user
+    checkuser(phoneVal);
+    
     // show More detail section
     // $('.otpSection').hide();
     // $('.moreDetailSection').show();
@@ -267,8 +270,8 @@ function runTimer(){
 		$('.validate-otp').addClass('btn-disabled');
 		 //enable after 30 sec
   		setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
-		validateotp(otpVal);  
-    checkuser(phoneVal);  
+		validateotp(otpVal); 
+      
     }
     
   });
@@ -336,7 +339,6 @@ function runTimer(){
 
 /*fill page script*/
 var baseUrl =  'https://maazaapi.bigcityredemption.com/api/';
-var tokenVal = '123123123';
 /*
 * authenticate($user, $pass) $result = [
 'type' => 'ERROR', 'msg' => 'Authentication failed', 'status' => 10, ]; $result = [
