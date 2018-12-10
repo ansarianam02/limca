@@ -13,6 +13,10 @@
  var tokenVal = '123123123';
 
 
+//Empty local storage on page hit
+localStorage.setItem('tokenVal', '');
+
+
 //Initial call to get token val
  initCall();
  function hideError(){
@@ -44,13 +48,15 @@ var settings = {
 $.ajax(settings).done(function (response) {
   
   var res =JSON.parse(response)
-  if(res.status==1){
-    window.location = "intro.html";
+  if(res.status==0){
+    // window.location = "intro.html";
+    showError(res.msg);
   }
   else{
     // show More detail section
-    $('.otpSection').hide();
-    $('.moreDetailSection').show();
+    // $('.otpSection').hide();
+    // $('.moreDetailSection').show();
+    
   }
 
  });
@@ -59,12 +65,17 @@ $.ajax(settings).done(function (response) {
 
 
 function initCall(){
-  //readParameter and redirect
+//readParameter and redirect
 var tree=new URLSearchParams(window.location.search);
 var packagecode = tree.get('packagecode');
 if(packagecode==null){
   console.log('Redirected !!');
     tokenVal = localStorage.getItem('tokenVal');
+  if(tokenVal.length <= 0){
+      $('.right-partition ').hide();
+    $('.err-msg').html('Invalid packge code. Please access this using the right URL');
+    $('.err-container').show()
+    }
 }
 else{
   console.log('With token !!')
@@ -246,6 +257,8 @@ function runTimer(){
      
     //otp empty
     var otpVal = $('#otpvalue').val();
+    var phoneVal = $('#phonenumber').val();
+
     if(otpVal.length <=0 ){
     	showError(emptyOtp);
     	return true;
@@ -254,7 +267,8 @@ function runTimer(){
 		$('.validate-otp').addClass('btn-disabled');
 		 //enable after 30 sec
   		setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
-		validateotp(otpVal);    
+		validateotp(otpVal);  
+    checkuser(phoneVal);  
     }
     
   });
@@ -381,15 +395,16 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
 	var res =JSON.parse(response)
-    if(res.status==1){
+    if(res.lastletter==0){
        //show otp and hide Error
-	   $('.regSection').hide();
-	   $('.banner-container').remove();
-	   $('.otpSection').show();
-	   $('.err-container').hide();
-
+	   // $('.regSection').hide();
+	   // $('.banner-container').remove();
+	   // $('.otpSection').show();
+	   // $('.err-container').hide();
+         $('.otpSection').hide();
+    $('.moreDetailSection').show();
     }else{
-
+    window.location = "intro.html";
     }
     
 });
