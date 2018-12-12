@@ -13,8 +13,8 @@
  var tokenVal = '';
 
 
-//Empty local storage on page hit
-localStorage.setItem('tokenVal', '');
+//check user route 
+localStorage.setItem('userRoute','false');
 
 
 //Initial call to get token val
@@ -71,17 +71,22 @@ function initCall(){
 //readParameter and redirect
 var tree=new URLSearchParams(window.location.search);
 var packagecode = tree.get('packagecode');
+var route ;
 if(packagecode==null){
   console.log('Redirected !!');
+    //check user route 
+    route = localStorage.getItem('userRoute');
+
     tokenVal = localStorage.getItem('tokenVal');
-  if(tokenVal.length <= 0){
+  if(!route || route =='false'){
       $('.right-partition ').hide();
-    $('.err-msg').html('Invalid packge code. Please access this using the right URL');
-    $('.err-container').show()
+      $('.err-msg').html('Invalid packge code. Please access this using the right URL');
+      $('.err-container').show()
     }
 }
 else{
-  console.log('With token !!')
+  localStorage.setItem('userRoute','true')
+  console.log('With token !!');
     var user = "muser1";
     var pass= "@122asdas9898";
     var form = new FormData();
