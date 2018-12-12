@@ -41,12 +41,10 @@ $(function(){
 /*    var level = 'MAAZ';
       //pass Api letter Number here
       var levelNo = parseInt(map[level]) ;
-
       //set depending on the level 
       $('.staticImg').css('background-image','url("img/static/'+levelNo+'-static.png")');
       //set animation Img
       
-
       var animationImage = new Image();
       animationImage.src = 'img/Animations/'+levelNo+'.gif';
      
@@ -54,7 +52,6 @@ $(function(){
         //set level on yop
       $('.level-stage').html(level);  
   
-
 */
    /*
     *  getgame($token) $result = [
@@ -116,8 +113,11 @@ var getgame =function(){
 
               animationImage = new Image();
               var gifNo = levelNo+1;
+              if (res.data.haswon==true){
               animationImage.src = 'img/Animations/'+gifNo+'.gif';
-             
+             }else {
+              animationImage.src = e+'img/Animations/'+gifNo+'.gif';
+             }
               // staticImg animationImg
                 //set level on yop
               $('.level-stage').html(level); 
