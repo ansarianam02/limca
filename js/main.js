@@ -279,9 +279,9 @@ function runTimer(){
     	return true;
     }else{
     	//disable btn for 30 sec
-		$('.validate-otp').addClass('btn-disabled');
-		 //enable after 30 sec
-  		setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
+		// $('.validate-otp').addClass('btn-disabled');
+		//  //enable after 30 sec
+  // 		setTimeout(function(){ $('.validate-otp').removeClass('btn-disabled'); }, 30000);
 		validateotp(otpVal); 
       
     }
