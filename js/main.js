@@ -115,6 +115,7 @@ else{
 
     $.ajax(settings).done(function (response) {
         //set token value
+	    var response = JSON.parse(response);
          localStorage.setItem('tokenVal', response.token);
         localStorage.setItem('userRoute',true);
 
