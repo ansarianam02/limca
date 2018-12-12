@@ -1,7 +1,3 @@
-
-
-
-
  //first Page
  var validMobileNumber = "Please Enter Valid Mobile Number .";
  var emptyMobileNumber = "Please Enter Mobile Number to continue";
@@ -10,6 +6,7 @@
  var registMandatory = "Please fill All Mandatory fields";
  var ValidEmailError = "Please Enter Valid Email ID";
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
+ var tokenVal = '';
 
 // comment this for testing on desktop
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -73,7 +70,7 @@ $.ajax(settings).done(function (response) {
 
 }
 
-tokenVal = localStorage.getItem('tokenVal');
+
 function initCall(){
 //readParameter and redirect
 var tree=new URLSearchParams(window.location.search);
@@ -437,7 +434,6 @@ $.ajax(settings).done(function (response) {
 /*
 registeruser($token, $mobilenum) $result = [
 'type' => 'SUCCESS', 'msg' => 'User registered', 'status' => 1, ];
-
 */
 var registeruser =function(mobilenum){
 
@@ -548,7 +544,6 @@ $.ajax(settings).done(function (response) {
 $result = [
 'type' => 'ERROR', 'msg' => 'Game not eligible’, 'data' => [], 'status' => 0, ];
 Iscomplete – true or false to indicate if game was successfully done
-
 *
 */
 var closegame =function(){
@@ -586,9 +581,7 @@ var phonenumber = function (inputtxt){
 
 
 /*
-
 API details 
-
 authenticate($user, $pass) $result = [
 'type' => 'ERROR', 'msg' => 'Authentication failed', 'status' => 10, ]; $result = [
 'type' => 'ERROR', 'msg' => 'Session invalid', 'status' => 15, ]; $result = [
@@ -615,6 +608,4 @@ closegame($token, $iscomplete, $userchoice) $result = [
 $result = [
 'type' => 'ERROR', 'msg' => 'Game not eligible’, 'data' => [], 'status' => 0, ];
 Iscomplete – true or false to indicate if game was successfully done
-
-
 */
