@@ -50,7 +50,9 @@ $.ajax(settings).done(function (response) {
   var res =JSON.parse(response)
   if(res.status==0){
     // window.location = "intro.html";
-    showError(res.msg);
+//     showError(res.msg);
+	   $('.errs-container').show();
+      $('.errs-msg').html(res.msg);
   }
   else{
     //call checkl user
