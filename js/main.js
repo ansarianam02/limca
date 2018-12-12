@@ -123,14 +123,13 @@ else{
     });
   }
 }
-var updateuser =function(name,email,age,city,state){
+var updateuser =function(name,email,age,state){
 
 var form = new FormData();
 form.append("token", tokenVal);
 form.append("name", name);
 form.append("email", email);
 form.append("age", age);
-form.append("city", city);
 form.append("state", state);
 
 var settings = {
