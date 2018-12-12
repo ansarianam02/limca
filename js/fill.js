@@ -215,22 +215,23 @@ var getgame =function(){
          
          }, 4700);
 
-     $('.btn-participate').delay(4700).show(0);
-     $('.btn-later').delay(4700).show(0);
+     
      var haswon = localStorage.getItem('haswon');
      
      if (haswon=="true"){
+      $('.btn-participate').delay(4700).show(0);
+     $('.btn-later').delay(4700).show(0);
      //show reminder popup
      setTimeout(function(){
        $('#reminderModal').modal('show'); 
     }, 5300);
-   }
-
-      
      setTimeout(function(){
       $('.level-stage').html(newLevel);
-    }, 4700);
-
+    }, 4700); 
+    } else {
+      $('.btn-later').html("Close and come back later");
+      $('.btn-later').delay(4700).show(0);
+    }
 
      //set level dynamically
      //$('.fill-container').css('background-image','url("img/Animations/'+levelNo+'.gif")'); 
@@ -285,7 +286,7 @@ $(document).on('click','#participateModal .btn-submit',function(){
     $('#participateModal').modal('hide');
     $('#participateModal .btn-submit').html('close');
     $('.btn-participate').hide();
-    $('.btn-later').html("Close and come back later")
+    $('.btn-later').html("Close and come back later");
 
 });
 
