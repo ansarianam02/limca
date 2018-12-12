@@ -12,11 +12,6 @@
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
  var tokenVal = '';
 
-
-//check user route 
-localStorage.setItem('userRoute','false');
-
-
 //Initial call to get token val
  initCall();
  function hideError(){
@@ -50,9 +45,7 @@ $.ajax(settings).done(function (response) {
   var res =JSON.parse(response)
   if(res.status==0){
     // window.location = "intro.html";
-//     showError(res.msg);
-	   $('.errs-container').show();
-      $('.errs-msg').html(res.msg);
+    showError(res.msg);
   }
   else{
     //call checkl user
@@ -87,7 +80,7 @@ if(packagecode==null){
     }
 }
 else{
-  localStorage.setItem('userRoute','true')
+  localStorage.setItem('userRoute',false);
   console.log('With token !!');
     var user = "muser1";
     var pass= "@122asdas9898";
@@ -114,6 +107,8 @@ else{
     $.ajax(settings).done(function (response) {
         //set token value
          localStorage.setItem('tokenVal', response.token);
+        localStorage.setItem('userRoute',true);
+
          window.location.href = "https://app-maaza.herokuapp.com/index.html";
     });
   }
