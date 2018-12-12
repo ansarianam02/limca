@@ -219,7 +219,7 @@ var getgame =function(){
      $('.btn-later').delay(4700).show(0);
      var haswon = localStorage.getItem('haswon');
      
-     if (haswon){
+     if (haswon=="true"){
      //show reminder popup
      setTimeout(function(){
        $('#reminderModal').modal('show'); 
