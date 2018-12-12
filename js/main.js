@@ -5,7 +5,7 @@
  var emptyOtp = "Please Enter OTP ";
  var registMandatory = "Please fill All Mandatory fields";
  var ValidEmailError = "Please Enter Valid Email ID";
- var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
+ var apiurl = "https://maazaqa.bigcitydays.com/v1/api/";
  var tokenVal = '';
 
 // comment this for testing on desktop
@@ -101,7 +101,7 @@ else{
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://maazaprod.bigcityexperiences.com/v1/api/authenticate",
+      "url": "https://maazaqa.bigcitydays.com/v1/api/authenticate",
       "method": "POST",
       "headers": {
         "cache-control": "no-cache",
@@ -350,7 +350,7 @@ function runTimer(){
 
 
 /*fill page script*/
-var baseUrl =  'https://maazaapi.bigcityredemption.com/api/';
+var baseUrl =  'https://maazaqa.bigcitydays.com/api/';
 /*
 * authenticate($user, $pass) $result = [
 'type' => 'ERROR', 'msg' => 'Authentication failed', 'status' => 10, ]; $result = [
