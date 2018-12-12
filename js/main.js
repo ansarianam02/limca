@@ -42,7 +42,7 @@ var settings = {
   
 $.ajax(settings).done(function (response) {
   
-  var res =JSON.parse(response);
+  var res =JSON.parse(response)
   if(res.status==0){
     // window.location = "intro.html";
     showError(res.msg);
