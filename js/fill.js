@@ -115,14 +115,18 @@ var getgame =function(){
               var gifNo = levelNo+1;
               if (res.data.haswon==true){
               animationImage.src = 'img/Animations/'+gifNo+'.gif';
+              $('.level-txt').html(prizeMap[stage+1].text);
+              $('.level-stage').html(level); 
+              localStorage.setItem('level',level);
              }else {
               animationImage.src = 'img/Animations/'+'e'+gifNo+'.gif';
              }
               // staticImg animationImg
                 //set level on yop
-              $('.level-stage').html(level); 
-              localStorage.setItem('level',level);
-              $('.level-txt').html(prizeMap[stage+1].text);
+              
+              
+              localStorage.setItem('haswon',res.data.haswon);
+              
 
               } else {
                 //for the maaza mega draw 
@@ -213,12 +217,14 @@ var getgame =function(){
 
      $('.btn-participate').delay(4700).show(0);
      $('.btn-later').delay(4700).show(0);
-
+     var haswon = localStorage.getItem('haswon');
+     
+     if (haswon){
      //show reminder popup
      setTimeout(function(){
        $('#reminderModal').modal('show'); 
     }, 5300);
-
+   }
 
       
      setTimeout(function(){
@@ -270,9 +276,7 @@ $(document).on('click','.btn-confirm-participate',function(e){
       /*if(participateOnce){       
         return true;
       }*/
-
       participateOnce = true;
-     
       // $(this).removeAttr('data-toggle').removeAttr('data-target');;
       $(this).html('Participate in MAAZA MEGA DRAW');
    });
