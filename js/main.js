@@ -73,7 +73,7 @@ $.ajax(settings).done(function (response) {
 
 }
 
-
+tokenVal = localStorage.getItem('tokenVal');
 function initCall(){
 //readParameter and redirect
 var tree=new URLSearchParams(window.location.search);
