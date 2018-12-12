@@ -167,6 +167,10 @@ $.ajax(settings).done(function (response) {
 }
 
   $(document).on('click','.btn-mobile-submit',function(e){
+	  
+	   
+    var phoneVal = $('#phonenumber').val();
+    $('#replacemob').html(phoneVal);
     function showError(errMsg) {
       $('.err-container').show();
       $('.err-msg').html(errMsg);
