@@ -12,13 +12,15 @@
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
  var tokenVal = '';
 
+// comment this for testing on desktop
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-// 		var element = document.getElementById('text');
 		if (isMobile) {
   			console.log("using mobile");
 		} else {
-			alert("Please use this site on mobile/tablet only");
+			alert("Please use this site on mobile/tablet only. You will now be redirected to the terms page");
+			window.location.href = "http://maaza.bigcityexperience.com";
 		}
+//comment the above for testing on desktop
 
 //Initial call to get token val
  initCall();
