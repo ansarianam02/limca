@@ -73,7 +73,7 @@ if(packagecode==null){
     route = localStorage.getItem('userRoute');
 
     tokenVal = localStorage.getItem('tokenVal');
-  if(typeof route !== 'undefined' || !route || route =='false'){
+  if(typeof route === 'undefined' || !route || route =='false'){
       $('.right-partition ').hide();
       $('.err-msg').html('Invalid packge code. Please access this using the right URL');
       $('.err-container').show()
