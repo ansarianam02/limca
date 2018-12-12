@@ -498,7 +498,7 @@ var resendotp =function(){
   
 
 var form = new FormData();
-form.append("token", "tokenVal");
+form.append("token", tokenVal);
 
 var settings = {
   "async": true,
