@@ -125,9 +125,6 @@ else{
 }
 var updateuser =function(name,email,age,city,state){
 
-var tokenVal = '';
-var mobilenumVal = '';
-
 var form = new FormData();
 form.append("token", tokenVal);
 form.append("name", name);
@@ -502,7 +499,7 @@ var resendotp =function(){
   
 
 var form = new FormData();
-form.append("token", "123123123");
+form.append("token", "tokenVal");
 
 var settings = {
   "async": true,
@@ -548,16 +545,14 @@ Iscomplete – true or false to indicate if game was successfully done
 *
 */
 var closegame =function(){
-
-var tokenVal = '';
-var mobilenumVal = '';
+var mobilenumVal = $('#phonenumber').val();
 
 $.ajax({
   type: "GET",
   url: baseUrl + "closegame",
   data: {
 	  	token: tokenVal ,
-	  	mobilenum :tokenVal
+	  	mobilenum : mobilenumVal
   	},
   cache: false,
   success: function(data){
