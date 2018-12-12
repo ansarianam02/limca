@@ -624,6 +624,14 @@ input::placeholder{
     text-align: center;
 }
 
+.errs-msg{
+  background:#ffe1e5;
+  color: #e74c3c;
+      border-radius: 6em;
+    padding: 5px 36px;
+    text-align: center;
+}
+
 /* Gift Page */
  .doorStation{
     width: 370px;
