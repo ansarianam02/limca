@@ -12,6 +12,14 @@
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
  var tokenVal = '';
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// 		var element = document.getElementById('text');
+		if (isMobile) {
+  			console.log("using mobile");
+		} else {
+			alert("Please use this site on mobile/tablet only");
+		}
+
 //Initial call to get token val
  initCall();
  function hideError(){
