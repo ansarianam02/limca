@@ -10,7 +10,6 @@
  var registMandatory = "Please fill All Mandatory fields";
  var ValidEmailError = "Please Enter Valid Email ID";
  var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/";
- var tokenVal = '';
 
 // comment this for testing on desktop
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
