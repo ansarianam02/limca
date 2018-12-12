@@ -295,12 +295,12 @@ function runTimer(){
     
     var firstVal = $('#firstname').val();
     var emailVal = $('#email').val();
-    var cityVal = $('#city').val();
+    // var cityVal = $('#city').val();
     var age =  $('#age').val();
     var stateVal = $('#state').val()
     var isEmailValid = isEmail(emailVal);
    
-    if(firstVal.length <=0 || emailVal.length <=0  || isEmpty(cityVal) || isEmpty(stateVal) ) {
+    if(firstVal.length <=0 || emailVal.length <=0  || isEmpty(stateVal) ) {
     	showError(registMandatory);
     	return true;
     }else if(!isEmailValid){
@@ -308,7 +308,7 @@ function runTimer(){
     	return true;
     }else{
     	//redirect to next Page
-    	updateuser(firstVal,emailVal,age,cityVal,stateVal);
+    	updateuser(firstVal,emailVal,age,stateVal);
       
       //window.location='fill.html';	
     }
