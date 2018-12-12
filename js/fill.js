@@ -116,7 +116,7 @@ var getgame =function(){
               if (res.data.haswon==true){
               animationImage.src = 'img/Animations/'+gifNo+'.gif';
              }else {
-              animationImage.src = e+'img/Animations/'+gifNo+'.gif';
+              animationImage.src = 'e'+'img/Animations/'+gifNo+'.gif';
              }
               // staticImg animationImg
                 //set level on yop
