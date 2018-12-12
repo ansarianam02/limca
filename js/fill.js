@@ -36,7 +36,7 @@ $(function(){
       var map ={ M : '0','MA':'2','MAA':'3','MAAZ':'4','MAAZA':'5'};
       var nameMap ={ 0 : '--' , 1 : 'M' , 2 :'MA', 3 : 'MAA', 4 : 'MAAZ', 5: 'MAAZA'};
       var animationImage ;
-      var apiurl = "https://maazaprod.bigcityexperiences.com/v1/api/"
+      var apiurl = "https://maazaqa.bigcitydays.com/v1/api/"
 
 /*    var level = 'MAAZ';
       //pass Api letter Number here
@@ -169,7 +169,7 @@ var getgame =function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://maazaprod.bigcityexperiences.com/v1/api/closegame",
+      "url": "https://maazaqa.bigcitydays.com/v1/api/closegame",
       "method": "POST",
       "headers": {
         "cache-control": "no-cache",
