@@ -61,6 +61,7 @@ $.ajax(settings).done(function (response) {
   }
   else{
     //call checkl user
+    var phoneVal = $('#phonenumber').val();
     checkuser(phoneVal);
     
     // show More detail section
