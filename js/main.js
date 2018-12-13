@@ -504,7 +504,7 @@ form.append("token", tokenVal);
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://maazaprod.bigcityexperiences.com/v1/api/resendotp",
+  "url": "https://maazaqa.bigcitydays.com/v1/api/resendotp",
   "method": "POST",
   "headers": {
     "cache-control": "no-cache",
