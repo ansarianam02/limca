@@ -123,13 +123,14 @@ else{
     });
   }
 }
-var updateuser =function(name,email,age,state){
+var updateuser =function(name,email,age,gender,state){
 
 var form = new FormData();
 form.append("token", tokenVal);
 form.append("name", name);
 form.append("email", email);
 form.append("age", age);
+form.append("gender", gender);
 form.append("state", state);
 
 var settings = {
@@ -295,7 +296,7 @@ function runTimer(){
     
     var firstVal = $('#firstname').val();
     var emailVal = $('#email').val();
-    // var cityVal = $('#city').val();
+    var genderVal = $('#gender').val();
     var age =  $('#age').val();
     var stateVal = $('#state').val()
     var isEmailValid = isEmail(emailVal);
@@ -308,7 +309,7 @@ function runTimer(){
     	return true;
     }else{
     	//redirect to next Page
-    	updateuser(firstVal,emailVal,age,stateVal);
+    	updateuser(firstVal,emailVal,age,genderVal,stateVal);
       
       //window.location='fill.html';	
     }
