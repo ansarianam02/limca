@@ -6,12 +6,12 @@ $(function(){
         var tokenVal = localStorage.getItem('tokenVal');
         var prizeMap = {
                             1:{
-                              text:'Smart Backpack',
-                              imgUrl :'img/SmartBackpack.png'
-                            },
-                            2:{
                               text:'Headphone',
                               imgUrl :'img/Headphone.png',
+                            },
+                            2:{
+                              text:'Smart Backpack',
+                              imgUrl :'img/SmartBackpack.png'
                             },
                             3:{
                               text:'Instant Camera',
@@ -300,6 +300,10 @@ $(document).on('click','#reminderModal .btn-submit',function(){
  
    $(document).on('click','.redirect-level-page',function(e){
         window.location ="winner-list.html";    
+  });
+
+  $(document).on('click','.redirect-home-page',function(e){
+        window.location ="http://maaza.bigcityexperience.com";    
   });
 
    $(document).on('click','.btn-submit',function(e){

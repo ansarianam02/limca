@@ -1,11 +1,11 @@
 var prizeMap = {
                             1:{
-                              text:'Smart Backpack',
-                              imgUrl :'img/SmartBackpack.png'
-                            },
-                            2:{
                               text:'Headphone',
                               imgUrl :'img/Headphone.png',
+                            },
+                            2:{
+                              text:'Smart Backpack',
+                              imgUrl :'img/SmartBackpack.png'
                             },
                             3:{
                               text:'Instant Camera',
