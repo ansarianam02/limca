@@ -148,7 +148,7 @@ var getgame =function(){
               } 
       }else{
         $('.fillSection').css('visibility','hidden');
-        $('.err-msg').html('Something went wrong !!');
+        $('.err-msg').html('Invalid token, Something went wrong !!');
         $('.err-container').show();
       }
     });
