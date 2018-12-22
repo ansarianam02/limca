@@ -474,7 +474,9 @@ $.ajax(settings).done(function (response) {
     },1000);
 
     }else{
-
+	$('.err-container').show();
+	    var errorMsg = res.msg;
+	    $('.err-msg').html(errorMsg);
     }
     
 });
