@@ -237,6 +237,9 @@ $.ajax(settings).done(function (response) {
     runTimer();
 
     }else{
+	$('.err-container').show();
+	    var errorMsg = res.msg;
+	    $('.err-msg').html(errorMsg);
 
     }
     
