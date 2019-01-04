@@ -46,7 +46,7 @@
 .introtxt4 span{
     margin-left: 1.2rem;   
 }
-.gift1:before{
+.gift2:before{
   content: '';
   background:url('../img/Smart Backpack.png');
   background-repeat: no-repeat;
@@ -61,9 +61,9 @@
     border-radius: 18%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    left:50%;
+    left:55%;
 }
-.gift2::before{
+.gift1::before{
   content: '';
   background:url('../img/Headphone.png');
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@
     border-radius: 18%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    left:50%;
+    left:55%;
 }
 .gift3::before{
   content: '';
